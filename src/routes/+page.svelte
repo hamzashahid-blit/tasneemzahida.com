@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import AboutMe from "./AboutMe.svelte";
+  import Categories from "./Categories.svelte";
+  import RecentEvents from "./RecentEvents.svelte";
+</script>
+
+<AboutMe/>
+<Categories/>
+<RecentEvents/>
