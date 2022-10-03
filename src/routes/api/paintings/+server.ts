@@ -1,17 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-import { fetchPaintings } from '$lib/paintings.ts';
-import { error } from '@sveltejs/kit';
+import { json, error } from '@sveltejs/kit';
+import Paintings from '$lib/assets/paintings.json';
 
 import type { RequestHandler } from './$types';
 export const GET: RequestHandler = async () => {
-	let paintings = await fetchPaintings();
-	if (paintings) {
-		return new Response(paintings);
+	if (Paintings) {
+		return new json(Paintings);
 	}
 	throw error(404, 'Could not find all paintings');
-	// let filenames = getCategoryFilenames('src/lib/assets');
-	// if (filenames) {
-	// 	return new json(filenames);
-	// }
 };
