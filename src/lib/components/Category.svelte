@@ -1,10 +1,8 @@
 <script lang="ts">
+  import type { Painting } from "src/types/Painting";
+
   export let categoryName: string;
-  export let paintings: {id: string,
-						 category: string,
-						 filename: string,
-						 title: string,
-						 description: string}[];
+  export let paintings: Painting[];
 </script>
 
 <div class="min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.28)-theme(space.10))] my-28 mx-60">

@@ -1,6 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 
+export function readFile(path) {
+	return fs.readFileSync(path, 'utf-8');
+}
+
 // let files = [];
 // export const getFilenamesRecursively = (directory) => {
 // 	const filesInDirectory = fs.readdirSync(directory);
