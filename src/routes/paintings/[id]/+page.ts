@@ -3,9 +3,7 @@ import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch, params }) => {
 	let response = await fetch('/api/paintings');
-	console.log('Response: ', response);
 	let paintings = await response.json();
-	console.log('Paintings: ', paintings);
 	if (!paintings) {
 		throw error(404, 'Could not find paintings');
 	}

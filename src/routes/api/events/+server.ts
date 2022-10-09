@@ -13,7 +13,10 @@ export const GET: RequestHandler = async ({ url }) => {
 		: Blogs;
 	let texts: string[] = [];
 	for (let blog of blogs) {
-		let file: string = fs.readFileSync(`src/lib/assets/events/${blog.mdFilename}`, 'utf-8');
+		let file: string = fs.readFileSync(
+			new URL(`src/lib/assets/events/${blog.mdFilename}`, import.meta.url).href,
+			'utf-8'
+		);
 		texts.push(marked.parse(file));
 	}
 	let data: ParsedEvent[] = blogs.map((blog, i) => {

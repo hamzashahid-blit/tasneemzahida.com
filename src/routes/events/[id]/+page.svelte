@@ -8,5 +8,5 @@
 </script>
 
 <h1>{blog.title}</h1>
-<img src="/src/lib/assets/events/{blog.imgFilename}" alt="About the event">
+<img src={new URL(`/src/lib/assets/events/${blog.imgFilename}`, import.meta.url).href} alt="About the event">
 <p>{@html text}</p>

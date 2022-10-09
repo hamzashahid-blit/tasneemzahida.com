@@ -7,11 +7,13 @@ import type { EventBlog } from 'src/types/EventBlog';
 
 import type { RequestHandler } from './$types';
 export const GET: RequestHandler = async ({ params }) => {
-	console.log('Entttttttterd');
 	let blogs: EventBlog[] = Blogs;
 	let texts: string[] = [];
 	for (let blog of blogs) {
-		let file: string = fs.readFileSync(`src/lib/assets/events/${blog.mdFilename}`, 'utf-8');
+		let file: string = fs.readFileSync(
+			new URL(`src/lib/assets/events/${blog.mdFilename}`, import.meta.url).href,
+			'utf-8'
+		);
 		texts.push(marked.parse(file));
 	}
 	let data: ParsedEvent[] = blogs.map((blog, i) => {
@@ -21,7 +23,6 @@ export const GET: RequestHandler = async ({ params }) => {
 		};
 	});
 	let parsedEvent: ParsedEvent = data.find(({ blog, _ }) => blog.id === params.id);
-	console.log(parsedEvent);
 	if (parsedEvent) {
 		return new json(parsedEvent);
 	}
