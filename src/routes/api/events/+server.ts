@@ -13,7 +13,8 @@ export const GET: RequestHandler = async ({ url }) => {
 		: Blogs;
 	let texts: string[] = [];
 	for (let blog of blogs) {
-		let file: string = await import(`../../../lib/assets/events/${blog.mdFilename}`);
+		let mdFilename: string = blog.mdFilename.slice(0, blog.mdFilename.length - 3);
+		let file: string = await import(`../../../lib/assets/events/${blog.mdFilename}.md`);
 		texts.push(marked.parse(file));
 	}
 	let data: ParsedEvent[] = blogs.map((blog, i) => {
