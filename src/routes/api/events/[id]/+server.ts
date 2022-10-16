@@ -12,7 +12,7 @@ export const GET: RequestHandler = async ({ params }) => {
 	let texts: string[] = [];
 	for (let blog of blogs) {
 		let mdFilename: string = blog.mdFilename.slice(0, blog.mdFilename.length - 3);
-		// let file: string = await import(`../../../../lib/assets/events/${mdFilename}.md`);
+		let bleh: string = await import(`../../../../lib/assets/events/${mdFilename}.md`);
 		let file: string = fs.readFileSync(path.resolve(`src/lib/assets/events/${mdFilename}.md`), "utf-8")
 		texts.push(marked.parse(file));
 	}
