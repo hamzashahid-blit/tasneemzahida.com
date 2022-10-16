@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from "path";
 import Blogs from '$lib/assets/events.json';
 import { error, json } from '@sveltejs/kit';
 import { marked } from 'marked';
@@ -10,7 +11,9 @@ export const GET: RequestHandler = async ({ params }) => {
 	let blogs: EventBlog[] = Blogs;
 	let texts: string[] = [];
 	for (let blog of blogs) {
-		let file: string = await import(`../../../../lib/assets/events/${blog.mdFilename}`);
+		let mdFilename: string = blog.mdFilename.slice(0, blog.mdFilename.length - 3);
+		// let file: string = await import(`../../../../lib/assets/events/${mdFilename}.md`);
+		let file: string = fs.readFileSync(path.resolve(`src/lib/assets/events/${mdFilename}.md`), "utf-8")
 		texts.push(marked.parse(file));
 	}
 	let data: ParsedEvent[] = blogs.map((blog, i) => {
