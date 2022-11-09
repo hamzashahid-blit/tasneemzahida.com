@@ -1,5 +1,5 @@
 import fs from 'fs';
-import path from "path";
+import path from 'path';
 import { error, json } from '@sveltejs/kit';
 import Blogs from '$lib/assets/events.json';
 import { marked } from 'marked';
@@ -15,11 +15,16 @@ export const GET: RequestHandler = async ({ url }) => {
 	let texts: string[] = [];
 	for (let blog of blogs) {
 		let mdFilename: string = blog.mdFilename.slice(0, blog.mdFilename.length - 3);
-		let bleh: string = await import(`../../../lib/assets/events/${mdFilename}.md`);
-		let file: string = fs.readFileSync(path.resolve(`src/lib/assets/events/${mdFilename}.md`), "utf-8")
+		// let file: string = await import(`../../../lib/assets/events/${mdFilename}.md`);
+		let file: string = fs.readFileSync(
+			path.resolve(`src/lib/assets/events/${mdFilename}.md`),
+			'utf-8'
+		);
+		// let bleh: string = new URL(`../../../lib/assets/events/${mdFilename}.md`, import.meta.url).href
+		console.log('MY RULRLRLRULLRURLURLRULRURLURLUR: ', file);
 		texts.push(marked.parse(file.toString()));
 	}
-	console.log("FILEEEEEEEEEEEEEEEEEEE: ", texts);
+	console.log('FILEEEEEEEEEEEEEEEEEEE: ', texts);
 	let data: ParsedEvent[] = blogs.map((blog, i) => {
 		return {
 			blog: blog,
