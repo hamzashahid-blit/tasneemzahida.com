@@ -1,6 +1,6 @@
 <!-- TODO: Fix dropshadow so that it is not only covering the bottom but all around -->
 
-<div id="categories" class="my-2 flex flex-col items-center justify-center">
+<div id="categories" class="my-22 flex flex-col items-center justify-center">
   <div id="visual" alt="A Painting showing Visual Da'wah">
 	<h1>Visual Da'wah</h1>
 	<p>Main artwork. Illustration of a calligraphic verse. I have around 50 million paintings here. Okay good job just see the thingamjig. Nice human.</p>
@@ -27,16 +27,16 @@
 	  linear-gradient(to left, rgba(245, 246, 252, 0.2),rgb(86, 69, 125, 0.83)),
 	  url("/about-me.jpg");
     /* @apply w-[98%] h-96 bg-cover bg-center flex flex-row items-center justify-evenly transition-all duration-300m-3 rounded-xl drop-shadow-2xl  /\*hover:bg-[length:150%]*\/  */
-    @apply grid grid-cols-3 items-center justify-items-center h-[31vh] bg-cover bg-center transition-all duration-300 mx-4 my-2 rounded-xl drop-shadow-xl text-white text-center
+    @apply grid grid-rows-3 md:grid-rows-none md:grid-cols-3 items-center justify-items-center h-[50vh] md:h-[31vh] bg-cover bg-center transition-all duration-300 mx-4 my-2 rounded-xl drop-shadow-lg text-white text-center px-2 py-1
   }
   h1 {
-	@apply text-6xl mb-2
+	@apply text-5xl lg:text-6xl mb-2
   }
   p {
-    @apply text-bxl
+    @apply text-xl lg:text-2xl
   }
   a {
-    @apply text-white text-2xl border-2 border-white rounded-full px-3 py-1 mt-2 transition-all duration-200 hover:text-primary hover:bg-white
+    @apply text-white text-lg md:text-2xl border-2 border-white rounded-full px-4 py-1 mt-2 transition-all duration-200 hover:text-primary hover:bg-white
   }
   /*#calligraphy {
     background-image:
