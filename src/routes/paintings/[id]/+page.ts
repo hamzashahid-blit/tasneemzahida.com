@@ -1,15 +1,18 @@
-import { error } from '@sveltejs/kit';
+import { json, error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
+import Paintings from '$lib/assets/paintings.json';
 
 export const load: PageLoad = async ({ fetch, params }) => {
-	let response = await fetch('/api/paintings');
-	let paintings = await response.json();
-	if (!paintings) {
-		throw error(404, 'Could not find paintings');
+	if (!Paintings) {
+		// TODO: All error messages should be revised and have fullstops at the end.
+		throw error(404, 'We could not find all paintings.');
 	}
-	let painting = paintings.find((painting) => params.id === painting.id);
+	// TODO: Convert appropriate variables to const.
+	const response = new json(Paintings);
+	const paintings = await response.json();
+	const painting = paintings.find((painting) => params.id === painting.id);
 	if (!painting) {
-		throw error(404, 'Could not find a painting with the id of "' + params.id + '"');
+		throw error(404, 'We could not find the painting you were looking for.');
 	}
 	return {
 		painting: painting
