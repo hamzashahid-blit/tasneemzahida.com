@@ -7,5 +7,6 @@ export const GET: RequestHandler = async () => {
 	if (paintings) {
 		return new json(paintings);
 	}
+	// TODO: Make custom Error Page
 	throw error(404, "No Visual Da'wah found...");
 };
