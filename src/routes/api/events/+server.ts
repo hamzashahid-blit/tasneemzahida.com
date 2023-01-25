@@ -6,6 +6,9 @@ import { marked } from 'marked';
 import type { EventBlog } from 'src/types/EventBlog';
 import type { ParsedEvent } from 'src/types/ParsedEvent';
 
+export const ssr = true;
+export const csr = false;
+
 import type { RequestHandler } from './$types';
 export const GET: RequestHandler = async ({ url }) => {
 	// If there is the N parameter get the first N events otherwise get all events.
@@ -21,7 +24,7 @@ export const GET: RequestHandler = async ({ url }) => {
 			'utf-8'
 		);
 		// let bleh: string = new URL(`../../../lib/assets/events/${mdFilename}.md`, import.meta.url).href
-		console.log('MY RULRLRLRULLRURLURLRULRURLURLUR: ', file);
+		console.log('MY URLRULRLRLRULLRURLURLRULRURLURLURL: ', file);
 		texts.push(marked.parse(file.toString()));
 	}
 	console.log('FILEEEEEEEEEEEEEEEEEEE: ', texts);
