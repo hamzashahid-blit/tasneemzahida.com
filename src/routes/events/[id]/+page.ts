@@ -1,24 +1,23 @@
 import { error, json } from '@sveltejs/kit';
 import { marked } from 'marked';
-import Blogs from '$lib/assets/events.json';
+import Events from '$lib/assets/events.json';
 import type { EventBlog } from 'src/types/EventBlog';
-import type { ParsedEvent } from 'src/types/ParsedEvent';
 
-export const ssr = false;
+export const ssr = true;
 export const csr = true;
 
 import type { PageLoad } from './$types';
 export const load: PageLoad = async ({ fetch, params }) => {
-	// const response = await fetch(`/api/events/${params.id}`);
-	// const event: ParsedEvent = await response.json();
-	// return {
-	// 	event: event
-	// };
-	const eventUrl = new URL(`/src/lib/assets/events/heheevent.md`, import.meta.url).href;
-	const response = await fetch(eventUrl);
-	const result = await response.text();
-	console.log('Markdown: ', result);
+	if (!Events) {
+		throw error(404, 'We could not find all events.');
+	}
+	let event = Events.find((event) => event.id === params.id);
+	if (!event) {
+		throw error(404, 'We could not find the event you were looking for.');
+	}
+	event.content = marked.parse(event.content);
+	console.log(event);
 	return {
-		goofyAhhh: result
+		event: event
 	};
 };

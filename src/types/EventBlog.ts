@@ -2,7 +2,6 @@ export interface EventBlog {
 	id: string;
 	title: string;
 	description: string;
-	imgFilename: string;
-	mdFilename: string;
+	content: string;
 	date: string;
 }

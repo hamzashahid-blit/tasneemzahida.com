@@ -17,6 +17,7 @@ export const GET: RequestHandler = async ({ url }) => {
 		: Blogs;
 	let texts: string[] = [];
 	for (let blog of blogs) {
+		// TODO: doesn't account for extension length other than 3 use greedy regexp dot instead or smth
 		let mdFilename: string = blog.mdFilename.slice(0, blog.mdFilename.length - 3);
 		// let file: string = await import(`../../../lib/assets/events/${mdFilename}.md`);
 		let file: string = fs.readFileSync(
