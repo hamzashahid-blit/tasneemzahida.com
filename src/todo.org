@@ -1,8 +1,8 @@
 * Frontend
 ** DONE Resize each painting to fit it's width forcefully
 ** DONE Fix the size of the gradient on painting hover
-** TODO Make sure painting doesn't move based on the size of description
-** TODO Make sure that title of the painting doesn't move on to newline
+** HALT Make sure painting doesn't move based on the size of description
+** DONE Make sure that title of the painting doesn't move on to newline
 ** TODO Complete "Contact Me" page
 ** TODO Style each event page
 * API
