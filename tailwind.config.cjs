@@ -1,10 +1,10 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} old-softgray: eeedff9 */
 module.exports = {
   content: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
     extend: {
 	  colors: {
-	    softgray: "#eeedf9",
+	    softgray: "#e7e7e7",
 	    primary: "#56457d",
 	    softprimary: "#75659a",
 	  },

@@ -3,8 +3,8 @@
 </script>
 
 <!-- HIEGHT OF NAVBAR: theme(space.28) -->
-<nav class="flex justify-evenly items-center text-primary h-28" class:active>
-  <div class="bg-softgray w-[300px] h-[310px] lg:w-[300px] lg:h-[310px] rounded-full scale-x-125 absolute -z-10 top-[calc(-22vh+3vw)] sm:top-[calc(-22vh)]"></div>
+<nav class="flex justify-evenly items-center text-primary mb-8" class:active>
+  <!-- <div class="bg-softgray w-[300px] h-[310px] lg:w-[300px] lg:h-[310px] rounded-full scale-x-125 absolute -z-10 top-[calc(-22vh+3vw)] sm:top-[calc(-22vh)]"></div> -->
   <!-- <div class="bg-softgray w-[70vw] h-[55vw] rounded-full absolute -z-10 -top-[calc(55vw)/2]"></div> -->
   <ul class="order-3 lg:order-1">
     <li data-sveltekit-prefetch><a href="/visual">Visual Da'wah</a></li>

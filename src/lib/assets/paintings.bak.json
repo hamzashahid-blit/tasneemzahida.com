@@ -1,0 +1,65 @@
+[
+	{
+		"id": "cuurvy-road",
+		"category": "calligraphy",
+		"filename": "cuurvy-road.jpg",
+		"title": "A Curvy Road",
+		"description": "A curvy road through the mazes of the city. It felt like a labyrinth, it felt like I was a rat in a science expriment. I could feel something go wrong. Very wrong."
+	},
+	{
+		"id": "knife-and-fork",
+		"category": "calligraphy",
+		"filename": "knife-and-fork.jpg",
+		"title": "A Knife and A Fork",
+		"description": "A curvy road through the mazes of the city. It felt like a labyrinth, it felt like I was a rat in a science expriment. I could feel something go wrong. Very wrong."
+	},
+	{
+		"id": "drone",
+		"category": "canonical",
+		"filename": "drone.jpg",
+		"title": "Spying for an Act",
+		"description": "A curvy road through the mazes of the city. It felt like a labyrinth, it felt like I was a rat in a science expriment. I could feel something go wrong. Very wrong."
+	},
+	{
+		"id": "random-ass-fruit",
+		"category": "canonical",
+		"filename": "random-ass-fruit.jpg",
+		"title": "Blisters of Fruit",
+		"description": "A curvy road through the mazes of the city. It felt like a labyrinth, it felt like I was a rat in a science expriment. I could feel something go wrong. Very wrong."
+	},
+	{
+		"id": "voxel-mesh",
+		"category": "canonical",
+		"filename": "voxel-mesh.jpg",
+		"title": "Concieled in sight",
+		"description": "A curvy road through the mazes of the city. It felt like a labyrinth, it felt like I was a rat in a science expriment. I could feel something go wrong. Very wrong."
+	},
+	{
+		"id": "cacti",
+		"category": "visual",
+		"filename": "cacti.jpg",
+		"title": "Red Live The Beetles",
+		"description": "A curvy road through the mazes of the city. It felt like a labyrinth, it felt like I was a rat in a science expriment. I could feel something go wrong. Very wrong."
+	},
+	{
+		"id": "hammering",
+		"category": "visual",
+		"filename": "hammering.jpg",
+		"title": "Work For the Money",
+		"description": "A curvy road through the mazes of the city. It felt like a labyrinth, it felt like I was a rat in a science expriment. I could feel something go wrong. Very wrong."
+	},
+	{
+		"id": "house",
+		"category": "visual",
+		"filename": "house.jpg",
+		"title": "The Abode",
+		"description": "A curvy road through the mazes of the city. It felt like a labyrinth, it felt like I was a rat in a science expriment. I could feel something go wrong. Very wrong."
+	},
+	{
+		"id": "vinyl",
+		"category": "visual",
+		"filename": "vinyl.jpg",
+		"title": "Broken Vinyl",
+		"description": "A curvy road through the mazes of the city. It felt like a labyrinth, it felt like I was a rat in a science expriment. I could feel something go wrong. Very wrong."
+	}
+]
