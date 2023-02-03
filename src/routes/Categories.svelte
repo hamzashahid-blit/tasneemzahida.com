@@ -23,11 +23,23 @@
 <!-- rgb(219, 197, 247, 0.83)  -->
 <style>
   #categories > div {
-    background-image:
-	  linear-gradient(to left, rgba(245, 246, 252, 0.2),rgb(86, 69, 125, 0.83)),
-	  url("/about-me.jpg");
     /* @apply w-[98%] h-96 bg-cover bg-center flex flex-row items-center justify-evenly transition-all duration-300m-3 rounded-xl drop-shadow-2xl  /\*hover:bg-[length:150%]*\/  */
     @apply grid grid-rows-3 md:grid-rows-none md:grid-cols-3 items-center justify-items-center h-[50vh] md:h-[31vh] bg-cover bg-center transition-all duration-300 mx-4 my-2 rounded-xl drop-shadow-lg text-white text-center px-2 py-1
+  }
+  #visual { /* rgba(245, 246, 252, 0.2) */
+    background-image:
+	  linear-gradient(to left, rgba(50, 50, 50, 0.5),rgb(86, 69, 125, 0.93)),
+	  url("/visual.png");
+  }
+  #calligraphy {
+    background-image:
+	  linear-gradient(to left, rgba(50, 50, 50, 0.5),rgb(86, 69, 125, 0.93)),
+	  url("/calligraphy.png");
+  }
+  #canonical {
+    background-image:
+	  linear-gradient(to left, rgba(50, 50, 50, 0.5),rgb(86, 69, 125, 0.93)),
+	  url("/canonical.png");
   }
   h1 {
 	@apply text-5xl lg:text-6xl mb-2

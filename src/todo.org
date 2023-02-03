@@ -1,15 +1,16 @@
 * Frontend
 ** DONE Resize each painting to fit it's width forcefully
 ** DONE Fix the size of the gradient on painting hover
-** HALT Make sure painting doesn't move based on the size of description
+** TODO Make sure painting doesn't move based on the size of description
 ** DONE Make sure that title of the painting doesn't move on to newline
 ** DONE Complete "Contact Me" page
 ** TODO Style each event page
 * API
-** TODO Add 3 events to the bottom of the homepage
+** DONE Add 3 events to the bottom of the homepage
 ** TODO Parse event description '\n' for newlines
 * Assets
-** TODO Add about me description
+** DONE Add about me description
+** DONE Image for each category in homepage
 ** TODO Missing description for the painting "A Peaceful Heart"
 ** TODO Missing description for the painting "Enchanting Deception"
 ** TODO Missing description for the painting "Eternal Remorse"
