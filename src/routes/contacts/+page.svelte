@@ -6,11 +6,11 @@
   import facebook from 'svelte-awesome/icons/facebookSquare';
 </script>
 
-<div class="min-h-[calc(100vh-theme(space.28)-theme(space.10)-theme(space.4))] w-full flex items-center justify-center mb-10 -my-10">
+<div class="min-h-[calc(100vh-theme(space.28)-theme(space.10)-theme(space.4))] w-full flex items-center justify-center mb-10 -my-5 lg:-my-10">
   <div>
-	 <h1 class="text-hxl text-primary mb-10">Contacts</h1>
-	 <div class="flex items-center justify-center space-x-14">
-	   <table class="table-auto text-primary text-3xl mb-3">
+	 <h1 class="text-5xl lg:text-hxl text-primary mb-10">Contacts</h1>
+	 <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-14">
+	   <table class="table-auto text-primary text-[1.7em] lg:text-3xl mb-2 lg:mb-3">
 	     <tbody>
 	      <!-- Mail -->
 	      <tr>
@@ -25,7 +25,7 @@
 	      </tr>
 	     </tbody>
 	   </table>
-	   <table class="table-auto text-primary text-3xl mb-3">
+	   <table class="table-auto w-full lg:w-min text-primary text-[1.7em] lg:text-3xl mb-3">
 	     <tbody>
 	      <!-- Instagram -->
 		  <tr>

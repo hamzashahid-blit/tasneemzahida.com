@@ -11,9 +11,9 @@
 ** DONE [SS] Navbar dropdown
 ** DONE [SS] Fix Homepage burger menu animation not smooth
 ** DONE [SS] Homepage Recent Events
-** TODO [SS] Contact Me page
+** DONE [SS] Contact Me page
 ** DONE [SS] Painting Category page
-** TODO [SS] paintings/[ID] Pages
+** DONE [SS] paintings/[ID] Pages
 ** TODO [SS] Events Page
 ** TODO [SS] events/[ID] Pages
 * API
