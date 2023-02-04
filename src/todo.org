@@ -7,10 +7,10 @@
 ** TODO Make sure painting doesn't move based on the size of description
 ** DONE Make sure that title of the painting doesn't move on to newline
 ** DONE Complete "Contact Me" page
-** TODO Style each event page
+** DONE Style each event page
 ** DONE [SS] Navbar dropdown
-** TODO [SS] Fix Homepage burger menu animation not smooth
-** TODO [SS] Homepage Recent Events
+** DONE [SS] Fix Homepage burger menu animation not smooth
+** DONE [SS] Homepage Recent Events
 ** TODO [SS] Contact Me page
 ** DONE [SS] Painting Category page
 ** TODO [SS] paintings/[ID] Pages
