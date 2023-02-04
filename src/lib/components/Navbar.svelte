@@ -35,7 +35,7 @@
   }
   ul {
 	@apply flex flex-col lg:flex-row justify-evenly w-full items-center absolute lg:relative
-		   -top-[75%] lg:top-0 transition-all ease-in-out duration-200 py-1
+		   -top-[75%] lg:top-0 transition-all ease-in-out duration-200 py-1 opacity-0
   }
   .bar {
 	@apply w-7 h-[.26rem] bg-primary rounded-xl transition-all ease-in-out antialiased
@@ -46,10 +46,10 @@
 		   first:translate-y-[calc(0.26rem+0.25rem-.1px)] last:translate-y-[calc(-0.26rem-0.25rem)]
   }
   .active #paintings {
-	@apply top-[7rem] border-softprimary border-t-2 mt-1
+	@apply opacity-100 top-[7rem] border-softprimary border-t-2 mt-1
   }
   .active #others {
-	@apply top-[13.75rem] border-softprimary border-b-2 mt-1 mb-[100px]
+	@apply opacity-100 top-[13.75rem] border-softprimary border-b-2 mt-1 mb-[100px]
   }
   .active { /* Style nav when .active */
 	@apply mb-[18rem]
