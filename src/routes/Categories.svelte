@@ -3,17 +3,17 @@
 <div id="categories" class="my-22 flex flex-col items-center justify-center">
   <div id="visual" alt="A Painting showing Visual Da'wah">
 	<h1>Visual Da'wah</h1>
-	<p>Main artwork. Illustration of a calligraphic verse. I have around 50 million paintings here. Okay good job just see the thingamjig. Nice human.</p>
+	<p>Main artwork. Illustration of a calligraphic verse. Nullam tempus. Curabitur lacinia pulvinar nibh. Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus</p>
 	<a href="/visual" data-sveltekit-prefetch>View more</a>
   </div>
   <div id="calligraphy" alt="A Painting showing Calligraphy">
 	<h1>Calligraphy</h1>
-	<p>Second artwork. Just my calligraphy and verse. I have around 10 million paintings here. Okay good job just see the thingamjig. Nice human.</p>
+	<p>Second artwork. Just a calligraphic verse. Nullam tempus. Curabitur lacinia pulvinar nibh. Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus</p>
 	<a href="/calligraphy" data-sveltekit-prefetch>View more</a>
   </div>
   <div id="canonical" alt="A Painting showing Other art">
 	<h1>Canonical</h1>
-	<p>Other artwork. Random artwork. I have around 80 million paintings here. Okay good job just see the thingamjig. Nice human.</p>
+	<p>Other artwork. Random artwork. Nullam tempus. Curabitur lacinia pulvinar nibh. Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus curabitur</p>
 	<a href="/canonical" data-sveltekit-prefetch>View more</a>
   </div>
 </div>
