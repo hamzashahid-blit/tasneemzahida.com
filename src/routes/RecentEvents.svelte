@@ -1,9 +1,8 @@
 <script lang="ts">
   import Event from "./Event.svelte";
+  import type { EventBlog } from "src/types/EventBlog";
 
-  import type { ParsedEvent } from "src/types/ParsedEvent";
-
-  export let events: ParsedEvent[];
+  export let events: EventBlog[];
 </script>
 
 <div class="flex flex-col justify-center h-[120vh]">
