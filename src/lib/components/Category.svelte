@@ -5,7 +5,7 @@
   export let paintings: Painting[];
 </script>
 
-<div class="min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.28)-theme(space.10))] my-28 mx-60">
+<div class="min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.28)-theme(space.10))] my-20 lg:my-28 mx-20 lg:mx-60">
   <h1 class="text-hxl text-primary mb-10">{categoryName}</h1>
   <div class="gap-8 lg:columns-3 md:columns-3 sm:columns-1">
 	{#each paintings as {id, category, filename, title, description}}
@@ -32,7 +32,7 @@
   }
   .brick h2, .brick p {
     opacity: 1;
-	@apply -bottom-10
+	@apply -bottom-16
   }
   .brick:hover h2, .brick:hover p {
     opacity: 1;

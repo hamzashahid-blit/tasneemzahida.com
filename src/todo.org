@@ -1,3 +1,6 @@
+* Legend
+** [SS] = Smaller Screens
+
 * Frontend
 ** DONE Resize each painting to fit it's width forcefully
 ** DONE Fix the size of the gradient on painting hover
@@ -5,6 +8,14 @@
 ** DONE Make sure that title of the painting doesn't move on to newline
 ** DONE Complete "Contact Me" page
 ** TODO Style each event page
+** DONE [SS] Navbar dropdown
+** TODO [SS] Fix Homepage burger menu animation not smooth
+** TODO [SS] Homepage Recent Events
+** TODO [SS] Contact Me page
+** DONE [SS] Painting Category page
+** TODO [SS] paintings/[ID] Pages
+** TODO [SS] Events Page
+** TODO [SS] events/[ID] Pages
 * API
 ** DONE Add 3 events to the bottom of the homepage
 ** TODO Parse event description '\n' for newlines
