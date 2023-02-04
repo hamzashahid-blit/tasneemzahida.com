@@ -15,7 +15,7 @@
 {#if events.length > 0}
   <div class="min-h-[calc(100vh-theme(space.28)-theme(space.7))]
 			  lg:min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.28)-theme(space.10))]
-			  my-12 lg:my-28 mx-4 lg:mx-60">
+			  mb-10 lg:my-28 mx-4 lg:mx-60">
     <h1 class="text-5xl lg:text-hxl text-primary w-full invisible md:visible">Events</h1>
 	<!-- First Event -->
     <a data-sveltekit-prefetch class="transition-all duration-300 fixed lg:relative invisible lg:visible" href="/events/{firstEvent.id}">
@@ -31,7 +31,7 @@
 	    </div>
 	  </div>
     </a>
-    <div class="mt-8 lg:mt-0 grid lg:grid-cols-4 md:grid-cols-3 gap-10 justify-center">
+    <div class="grid lg:grid-cols-4 md:grid-cols-3 gap-10 justify-center">
       <h1 class="text-5xl lg:text-hxl text-primary w-full md:invisible md:fixed">Events</h1>
 	  <!-- Mobile first Event -->
 	  <div class="visible lg:invisible lg:fixed">
