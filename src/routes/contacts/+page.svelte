@@ -14,7 +14,7 @@
 	     <tbody>
 	      <!-- Mail -->
 	      <tr>
-	       <td class="text-center align-middle pr-4 pb-3">
+	       <td class="text-center align-middle pr-4 pb-4 lg:pb-3">
 			 <a href="mailto:tasneemzart@gmail.com"><Icon data={email} scale={2}/></a></td>
 	       <td class="pb-3"><a href="mailto:tasneemzart@gmail.com">tasneemzart@gmail.com</a></td>
 	      </tr>

@@ -13,9 +13,12 @@
 </script>
 
 {#if events.length > 0}
-  <div class="min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.28)-theme(space.10))] my-28 mx-60">
-    <h1 class="text-hxl text-primary w-full">Events</h1>
-    <a data-sveltekit-prefetch class="transition-all duration-300" href="/events/{firstEvent.id}">
+  <div class="min-h-[calc(100vh-theme(space.28)-theme(space.7))]
+			  lg:min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.28)-theme(space.10))]
+			  my-12 lg:my-28 mx-4 lg:mx-60">
+    <h1 class="text-5xl lg:text-hxl text-primary w-full invisible md:visible">Events</h1>
+	<!-- First Event -->
+    <a data-sveltekit-prefetch class="transition-all duration-300 fixed lg:relative invisible lg:visible" href="/events/{firstEvent.id}">
 	  <div class="before:content-[''] before:absolute before:h-1/2 before:w-full before:bg-gradient-to-b before:top-3/4 before:from-transparent before:to-[rgb(0,0,0,0.7)] before:transition-all before:duration-300
 				  relative my-10 transition-all overflow-hidden rounded-lg">
 	    <img id="firstImg" class="max-h-96 w-full object-cover" src={new URL(`/src/lib/assets/events/${firstEvent.id}.png`, import.meta.url).href} alt={firstEvent.title}>
@@ -28,9 +31,15 @@
 	    </div>
 	  </div>
     </a>
-    <div class="grid grid-cols-4 gap-10">
+    <div class="mt-8 lg:mt-0 grid lg:grid-cols-4 md:grid-cols-3 gap-10 justify-center">
+      <h1 class="text-5xl lg:text-hxl text-primary w-full md:invisible md:fixed">Events</h1>
+	  <!-- Mobile first Event -->
+	  <div class="visible lg:invisible lg:fixed">
+	    <Event event={firstEvent} />
+	  </div>
+	  <!-- Rest of the Events -->
       {#each events.slice(1) as event}
-	    <Event {event}/>
+	     <Event {event}/>
       {/each}
     </div>
   </div>

@@ -14,7 +14,7 @@
 ** DONE [SS] Contact Me page
 ** DONE [SS] Painting Category page
 ** DONE [SS] paintings/[ID] Pages
-** TODO [SS] Events Page
+** DONE [SS] Events Page
 ** TODO [SS] events/[ID] Pages
 * API
 ** DONE Add 3 events to the bottom of the homepage
