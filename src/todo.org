@@ -15,7 +15,7 @@
 ** DONE [SS] Painting Category page
 ** DONE [SS] paintings/[ID] Pages
 ** DONE [SS] Events Page
-** TODO [SS] events/[ID] Pages
+** DONE [SS] events/[ID] Pages
 * API
 ** DONE Add 3 events to the bottom of the homepage
 ** TODO Parse event description '\n' for newlines
