@@ -13,7 +13,28 @@
 <!-- {/await} -->
 
 <div class="flex flex-col justify-center mx-60 my-28">
-  <h1 class="text-5xl text-primary">{event.title}</h1>
+  <h1 class="text-hxl text-primary">{event.title}</h1>
   <img class="rounded-md mt-5 mb-10" src={new URL(`/src/lib/assets/events/${event.id}.png`, import.meta.url).href} alt="About the event">
-  <div class="text-primary text-2xl">{@html event.content}</div>
+  <div id="md" class="text-primary">{@html event.content}</div>
 </div>
+
+<style>
+  #md :global(h1) {
+	@apply text-5xl
+  }
+  #md :global(h2) {
+	@apply text-4xl
+  }
+  #md :global(h3) {
+	@apply text-3xl
+  }
+  #md :global(h4) {
+	@apply text-2xl
+  }
+  #md :global(h5) {
+	@apply text-xl
+  }
+  #md :global(p) {
+	@apply text-2xl
+  }
+</style>
