@@ -30,7 +30,8 @@
 
 <style>
   li {
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
+	@apply text-2xl lg:text-[1.2em]
   }
   ul {
 	@apply flex flex-col lg:flex-row justify-evenly w-full items-center absolute lg:relative
@@ -48,10 +49,10 @@
 	@apply top-[7rem] border-softprimary border-t-2 mt-1
   }
   .active #others {
-	@apply top-[13rem] border-softprimary border-b-2 mt-1 mb-[100px]
+	@apply top-[13.75rem] border-softprimary border-b-2 mt-1 mb-[100px]
   }
   .active { /* Style nav when .active */
-	@apply mb-[15rem]
+	@apply mb-[18rem]
   }
   .active img {
     /*@apply opacity-0 transition-all ease-in-out */
