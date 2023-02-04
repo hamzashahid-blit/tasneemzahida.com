@@ -5,7 +5,8 @@
   export let paintings: Painting[];
 </script>
 
-<div class="min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.28)-theme(space.10))] my-20 lg:my-28 mx-10 lg:mx-60">
+<div class="min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.14))]
+			lg:min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.28)-theme(space.10))] my-20 lg:my-28 mx-10 lg:mx-60">
   <h1 class="text-6xl lg:text-hxl text-primary mb-7 lg:mb-10">{categoryName}</h1>
   <div class="gap-8 lg:columns-3 md:columns-3 sm:columns-1">
 	{#each paintings as {id, category, filename, title, description}}
