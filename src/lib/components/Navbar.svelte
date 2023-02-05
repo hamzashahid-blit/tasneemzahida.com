@@ -35,7 +35,7 @@
   }
   ul {
 	@apply flex flex-col lg:flex-row justify-evenly w-full items-center absolute lg:relative
-		   -top-[75%] lg:top-0 transition-all ease-in-out duration-200 py-1 opacity-0
+		   -top-[75%] lg:top-0 transition-all ease-in-out duration-200 py-1 opacity-0 lg:opacity-100
   }
   .bar {
 	@apply w-7 h-[.26rem] bg-primary rounded-xl transition-all ease-in-out antialiased
