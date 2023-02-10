@@ -1,5 +1,6 @@
 * Legend
 ** [SS] = Smaller Screens
+** [BS] = Bigger Screens
 
 * Frontend
 ** DONE Resize each painting to fit it's width forcefully
@@ -16,22 +17,33 @@
 ** DONE [SS] paintings/[ID] Pages
 ** DONE [SS] Events Page
 ** DONE [SS] events/[ID] Pages
+** DONE [BS] Make Paintings more prominent
+** TODO Give About Me section a separate page
+** TODO Add a carousel in place of About Me section to show paintings
+** TODO Replace phone icon with Whatsapp icon in Contacts
 * API
 ** DONE Add 3 events to the bottom of the homepage
 ** TODO Parse event description '\n' for newlines
 * Assets
-** DONE Add about me description
+** DONE Add About Me description
 ** DONE Image for each category in homepage
-** TODO Missing description for the painting "A Peaceful Heart"
-** TODO Missing description for the painting "Enchanting Deception"
-** TODO Missing description for the painting "Eternal Remorse"
-** TODO Missing description for the painting "Appeal for Mercy"
-** TODO Missing description for the painting "An Evident Declaration"
-** TODO Missing description for the painting "Nebula"
-** TODO Missing description for the painting "Inconceivable Ingenuity"
-** TODO Missing description for the painting "Pen and Ink"
-** TODO Missing description for the painting "Unimaginable Reward"
-** TODO Missing description for the painting "Peaceful Garden"
-** TODO Missing description for the painting "Makkah at Dawn"
-** TODO Populate Events
-** TODO Populate Calligraphy
+** TODO Add Description for painting "A Peaceful Heart"
+** TODO Add Description for painting "Enchanting Deception"
+** TODO Add Description for painting "Eternal Remorse"
+** TODO Add Description for painting "Appeal for Mercy"
+** TODO Add Description for painting "An Evident Declaration"
+** TODO Add Description for painting "Nebula"
+** TODO Add Description for painting "Inconceivable Ingenuity"
+** TODO Add Description for painting "Pen and Ink"
+** TODO Add Description for painting "Unimaginable Reward"
+** TODO Add Description for painting "Peaceful Garden"
+** TODO Add Description for painting "Makkah at Dawn"
+** TODO Add Event: "Different Strokes" Exhibition
+   + 17th July 2019
+   + First Solo Exhibition
+   + Gallery name: "art vision"
+   + Person behind it: hisham binjabi.
+   + Different nationalities, 100s of people
+   + 4 days duration
+   + 27 Visual Da'wah pieces
+   + At Jeddah

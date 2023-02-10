@@ -8,7 +8,7 @@
 			min-h-[calc(100vh-theme(space.28)-theme(space.10)-theme(space.4)-theme(space.7))]
 			lg:h-[calc(100vh-theme(space.28)-theme(space.10)+theme(space.8)-theme(space.4))]
 			lg:space-x-28 mx-2 lg:mx-24 lg:-mt-8 text-primary my-10">
-  <div class="order-2 lg:order-1 flex flex-col space-y-12 lg:space-y-14 items-start mx-4">
+  <div class="order-2 lg:order-1 flex flex-col space-y-12 lg:space-y-14 items-start mx-4 w-full">
     <h1 class="text-4xl lg:text-6xl flex items-center lg:w-max mt-7 max-h-10 lg:max-h-full">
 	  <a class="text-4xl lg:text-5xl mr-4 lg:mr-10 hover:text-5xl lg:hover:text-6xl transition-all" href="/{category}" data-sveltekit-prefetch>←</a>
 	  {title}
