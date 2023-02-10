@@ -22,7 +22,7 @@
 	      <!-- Phone -->
 	      <tr>
 	       <td class="text-center align-middle pr-4"><Icon data={whatsapp} scale={2}/></td>
-	       <td>+16478192962</td>
+	       <td>+1 (647) 819-2962</td>
 	      </tr>
 	     </tbody>
 	   </table>
