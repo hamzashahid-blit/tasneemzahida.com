@@ -2,11 +2,12 @@
   import Icon from 'svelte-awesome';
   import email from 'svelte-awesome/icons/envelopeO';
   import instagram from 'svelte-awesome/icons/instagram';
-  import phone from 'svelte-awesome/icons/phone';
+  import whatsapp from 'svelte-awesome/icons/whatsapp';
   import facebook from 'svelte-awesome/icons/facebookSquare';
 </script>
 
-<div class="min-h-[calc(100vh-theme(space.28)-theme(space.10)-theme(space.4))] w-full flex items-center justify-center mb-10 -my-5 lg:-my-10">
+<div class="min-h-[calc(100vh-theme(space.28)-theme(space.10)-theme(space.4))]
+			lg:min-h-[calc(100vh-theme(space.20)-theme(space.2))] w-full flex items-center justify-center mb-10 -my-5 lg:-my-10">
   <div>
 	 <h1 class="text-5xl lg:text-hxl text-primary mb-10">Contacts</h1>
 	 <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-14">
@@ -20,8 +21,8 @@
 	      </tr>
 	      <!-- Phone -->
 	      <tr>
-	       <td class="text-center align-middle pr-4"><Icon data={phone} scale={2}/></td>
-	       <td>6478192962</td>
+	       <td class="text-center align-middle pr-4"><Icon data={whatsapp} scale={2}/></td>
+	       <td>+16478192962</td>
 	      </tr>
 	     </tbody>
 	   </table>

@@ -20,7 +20,7 @@
 ** DONE [BS] Make Paintings more prominent
 ** TODO Give About Me section a separate page
 ** TODO Add a carousel in place of About Me section to show paintings
-** TODO Replace phone icon with Whatsapp icon in Contacts
+** DONE Replace Phone icon with Whatsapp icon in Contacts
 * API
 ** DONE Add 3 events to the bottom of the homepage
 ** TODO Parse event description '\n' for newlines
