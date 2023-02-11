@@ -4,6 +4,7 @@
   let {id, category, filename, title, description} = data.painting;
 </script>
 
+<title>Painting: {title}</title>
 <div class="flex flex-col lg:flex-row items-center
 			min-h-[calc(100vh-theme(space.28)-theme(space.10)-theme(space.4)-theme(space.7))]
 			lg:h-[calc(100vh-theme(space.28)-theme(space.10)+theme(space.8)-theme(space.4))]

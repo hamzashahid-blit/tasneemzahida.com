@@ -5,4 +5,5 @@
   export let data: PageData;
 </script>
 
+<title>Tasneem Zahida: All Paintings</title>
 <Category categoryName="All Paintings" paintings={data.paintings}/>

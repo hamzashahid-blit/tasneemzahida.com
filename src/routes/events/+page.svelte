@@ -12,6 +12,7 @@
   }
 </script>
 
+<title>Tasneem Zahida: Events</title>
 {#if events.length > 0}
   <div class="min-h-[calc(100vh-theme(space.28)-theme(space.7))]
 			  lg:min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.28)-theme(space.10))]

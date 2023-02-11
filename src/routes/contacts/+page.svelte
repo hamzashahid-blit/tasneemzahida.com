@@ -6,6 +6,7 @@
   import facebook from 'svelte-awesome/icons/facebookSquare';
 </script>
 
+<title>Tasneem Zahida: Contacts</title>
 <div class="min-h-[calc(100vh-theme(space.28)-theme(space.10)-theme(space.4))]
 			lg:min-h-[calc(100vh-theme(space.20)-theme(space.2))] w-full flex items-center justify-center mb-10 -my-5 lg:-my-10">
   <div>

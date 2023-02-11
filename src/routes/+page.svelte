@@ -8,6 +8,7 @@
   let events = data.events;
 </script>
 
+<title>Tasneem Zahida</title>
 <AboutMe/>
 <Categories/>
 <RecentEvents {events}/>
