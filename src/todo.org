@@ -10,7 +10,6 @@
 ** DONE Complete "Contact Me" page
 ** DONE Style each event page
 ** DONE [SS] Navbar dropdown
-** DONE [SS] Fix Homepage burger menu animation not smooth
 ** DONE [SS] Homepage Recent Events
 ** DONE [SS] Contact Me page
 ** DONE [SS] Painting Category page
@@ -25,9 +24,14 @@
 ** TODO Bottom paintings load first and keep on moving in category grid
 ** TODO Make order of paintings less random to keep best on top
 ** TODO Create a SOLD badge for paintings no longer available
-** TODO [SS] Show name on scroll
+** TODO [SS] Show name of painting on scroll
+** TODO [SS] Snap scroll to painting & Events?????
+** TODO [SS] Prettier hamburger menu
+** DONE [SS] Actually Fix burger menu animation not smooth (margin -> transforms)
+** DONE [SS] Remove blue highlight on hamburger menu
 ** DONE Add Title "Tasneem Zahida: [SUBPAGE]"
 ** TODO Add Website Icon
+** TODO Hitting back button on /painting/{id} should remember scroll pos
 * API
 ** DONE Add 3 events to the bottom of the homepage
 ** TODO Parse event description '\n' for newlines

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Carousel from "./Carousel.svelte";
   import AboutMe from "./AboutMe.svelte";
   import Categories from "./Categories.svelte";
   import RecentEvents from "./RecentEvents.svelte";
@@ -6,9 +7,11 @@
   import type { PageData } from "./$types";
   export let data: PageData;
   let events = data.events;
+  let paintings = data.paintings;
 </script>
 
 <title>Tasneem Zahida</title>
+<Carousel {paintings}/>
 <AboutMe/>
 <Categories/>
 <RecentEvents {events}/>
