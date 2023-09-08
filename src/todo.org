@@ -1,3 +1,5 @@
+#+TITLE: TODO for tasneemzahida.com
+
 * Legend
 ** [SS] = Smaller Screens
 ** [BS] = Bigger Screens
@@ -40,14 +42,44 @@
 * Assets
 ** DONE Add About Me description
 ** DONE Image for each category in homepage
-** TODO Add Description for painting "A Peaceful Heart"
-** TODO Add Description for painting "Enchanting Deception"
+** DONE Add Description for painting "A Peaceful Heart"
+   Ar Raad:28
+       The ups and downs of our ECG are combined with the beautiful ayaat that
+       says "Verily, only through remembrance of Allah do hearts find peace".
+** DONE Add Description for painting "Enchanting Deception"
+   Al Hadeed:20 
+       Beautiful bubbles are shown in various colors and sizes, they are all
+       mesmerizing with colorful sunshine dancing on their surfaces. Our Earth
+       with all its beauty is amongst them. Its colors and attractions make us
+       forget that delight of the bubble is very brief and short lived.
+	   "The life of this world is nothing but enjoyment of vanity".
 ** TODO Add Description for painting "Eternal Remorse"
-** TODO Add Description for painting "Appeal for Mercy"
-** TODO Add Description for painting "An Evident Declaration"
-** TODO Add Description for painting "Nebula"
+   UNKNOWN:
+       This painting illustrates utter despair and regret. When the skeleton was
+       a living being, it wasted the chances of earning a place in heaven. This
+       futile display of repentance serves as a warning to fully avail the
+       opportunity of earning Akhira in our lifetime.
+** DONE Add Description for painting "Appeal for Mercy"
+   Al Baqara:286
+       This tree facing the sky is in all prayers to Allah (SWT). "Our lord! Do
+       not burden us with more than we have strength to bear, and pardon us and
+       forgive us and have mercy on us".
+** DONE Add Description for painting "An Evident Declaration"
+   Al Mulk:19
+       As mentioned in the Quran, "Have they not seen the birds above them,
+       spreading their wings and holding them? None holds them except the
+       Compassionate. He is the perceiver of everything."
+** DONE Add Description for painting "Nebula"
+   Al e Imran:47
+      Countless nebulas exist in outer space, new stars are created all the time
+      and none of them are coincidental. It is with Allah's (SWT) command of
+      "Be" and it becomes.
 ** TODO Add Description for painting "Inconceivable Ingenuity"
-** TODO Add Description for painting "Pen and Ink"
+** DONE Add Description for painting "Pen and Ink"
+   Luqman:27
+       As mentioned in the Quran, "And if whatever trees upon the earth were
+       pens and seas were ink, replenished after by seven more seas, the words
+       of Allah (SWT) would not be exhausted indeed"
 ** TODO Add Description for painting "Unimaginable Reward"
 ** TODO Add Description for painting "Peaceful Garden"
 ** TODO Add Description for painting "Makkah at Dawn"
