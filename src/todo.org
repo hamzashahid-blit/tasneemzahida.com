@@ -1,10 +1,16 @@
 #+TITLE: TODO for tasneemzahida.com
 
 * Legend
+** TODO Shift to tags for screen sizes and use brackets for priorities; [#A], [#B], etc.
 ** [SS] = Smaller Screens
 ** [BS] = Bigger Screens
 
 * Frontend
+** TODO [#A] JSON Data not understanding escape characters e.g "\n" or "\t"
+** TODO [#B] Back button wierd at different zoom sizes...
+   Probably cz of translation to HTML. See [[https://stackoverflow.com/questions/43097752/javascript-new-line-n-not-effective-while-pulling-in-json-from-external-fil][this]] SO question.
+** TODO [#Q] Sort the random prerender = true and stuff...
+** TODO [#Z] Dark mode
 ** DONE Resize each painting to fit it's width forcefully
 ** DONE Fix the size of the gradient on painting hover
 ** TODO Make sure painting doesn't move based on the size of description
@@ -19,7 +25,7 @@
 ** DONE [SS] Events Page
 ** DONE [SS] events/[ID] Pages
 ** DONE [BS] Make Paintings more prominent
-** TODO Give About Me section a separate page
+** HALT Give About Me section a separate page
 ** TODO Add a carousel in place of About Me section to show Visual Da'wah
 ** TODO Add left & right buttons to carousel
 ** DONE Replace Phone icon with Whatsapp icon in Contacts
@@ -33,7 +39,15 @@
 ** DONE [SS] Remove blue highlight on hamburger menu
 ** DONE Add Title "Tasneem Zahida: [SUBPAGE]"
 ** TODO Add Website Icon
-** TODO Hitting back button on /painting/{id} should remember scroll pos
+** DONE Hitting back button on /painting/{id} should remember scroll pos
+CLOSED: [2023-10-21 Sat 08:27]
+:LOGBOOK:
+- CLOSING NOTE [2023-10-21 Sat 08:27] \\
+  Had to use OnMount callback (return func) to set a store in localStorage before
+  leaving the page, then retrieving it in the actual onMount BUT WRAPPING IT IN
+  SetTimeout with zero delay :/ Js is lame...
+:END:
+
 * API
 ** DONE Add 3 events to the bottom of the homepage
 ** TODO Parse event description '\n' for newlines
@@ -74,15 +88,15 @@
       Countless nebulas exist in outer space, new stars are created all the time
       and none of them are coincidental. It is with Allah's (SWT) command of
       "Be" and it becomes.
-** TODO Add Description for painting "Inconceivable Ingenuity"
+** DONE Add Description for painting "Inconceivable Ingenuity"
 ** DONE Add Description for painting "Pen and Ink"
    Luqman:27
        As mentioned in the Quran, "And if whatever trees upon the earth were
        pens and seas were ink, replenished after by seven more seas, the words
        of Allah (SWT) would not be exhausted indeed"
-** TODO Add Description for painting "Unimaginable Reward"
-** TODO Add Description for painting "Peaceful Garden"
-** TODO Add Description for painting "Makkah at Dawn"
+** DONE Add Description for painting "Unimaginable Reward"
+** DONE Add Description for painting "Peaceful Garden"
+** DONE Add Description for painting "Makkah at Dawn"
 ** TODO Add Event: "Different Strokes" Exhibition
    + 17th July 2019
    + First Solo Exhibition

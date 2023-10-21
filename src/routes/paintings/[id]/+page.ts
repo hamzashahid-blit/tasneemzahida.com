@@ -4,7 +4,6 @@ import Paintings from '$lib/assets/paintings.json';
 
 export const load: PageLoad = async ({ fetch, params }) => {
 	if (!Paintings) {
-		// TODO: All error messages should be revised and have fullstops at the end.
 		throw error(404, 'We could not find all paintings.');
 	}
 	// TODO: Convert appropriate variables to const.

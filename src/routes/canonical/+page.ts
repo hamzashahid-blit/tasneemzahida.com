@@ -9,7 +9,7 @@ export const csr = true;
 export const load: PageLoad = async ({ fetch }) => {
 	let canonicalPaintings = allPaintings.filter((painting) => painting.category === 'canonical');
 	if (!canonicalPaintings) {
-		throw error(404, 'No canonical paintings found...');
+		throw error(404, 'No canonical paintings found.');
 	}
 	const response = new json(canonicalPaintings);
 	const paintings = await response.json();

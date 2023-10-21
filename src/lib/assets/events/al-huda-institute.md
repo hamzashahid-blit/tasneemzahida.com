@@ -1,0 +1,1 @@
+I was given the privilege to present my Islamic art, paintings, and calligraphy to the wider community at the Al Huda Institute. This was my biggest event to date since arriving in Canada, which attracted a large Muslim audience from all across the GTA to become more connected with their faith and learn about the values and teachings of Islam through my illustrations. 

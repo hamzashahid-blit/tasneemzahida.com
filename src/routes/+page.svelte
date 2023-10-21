@@ -11,7 +11,7 @@
 </script>
 
 <title>Tasneem Zahida</title>
-<Carousel {paintings}/>
+<!-- <Carousel {paintings}/> -->
 <AboutMe/>
 <Categories/>
 <RecentEvents {events}/>
