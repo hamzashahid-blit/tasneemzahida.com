@@ -14,7 +14,7 @@
 	  <a class="text-4xl lg:text-5xl mr-4 lg:mr-10 hover:text-5xl lg:hover:text-6xl transition-all" href="/{category}" data-sveltekit-prefetch>←</a>
 	  {title}
 	</h1>
-    <p class="text-2xl -mt-4 lg:mt-0">{description}</p>
+    <p class="text-2xl -mt-4 lg:mt-0 whitespace-pre-wrap">{description}</p>
 	<a class="text-2xl border-2 border-primary rounded-full px-3 py-1 mt-2 transition-all duration-200 hover:text-white hover:bg-primary" href="/contacts" data-sveltekit-prefetch>Order now</a>
   </div>
   <div class="order-1 lg:order-2 flex items-start w-full justify-center mb-5 lg:mb-0">

@@ -6,7 +6,13 @@
 ** [BS] = Bigger Screens
 
 * Frontend
-** TODO [#A] JSON Data not understanding escape characters e.g "\n" or "\t"
+** DONE [#A] JSON Data not understanding escape characters e.g "\n" or "\t"
+CLOSED: [2023-10-21 Sat 10:24]
+:LOGBOOK:
+- CLOSING NOTE [2023-10-21 Sat 10:24] \\
+  Just had to add tailwind class "whitespace-pre-wrap" to description
+:END:
+
 ** TODO [#B] Back button wierd at different zoom sizes...
    Probably cz of translation to HTML. See [[https://stackoverflow.com/questions/43097752/javascript-new-line-n-not-effective-while-pulling-in-json-from-external-fil][this]] SO question.
 ** TODO [#Q] Sort the random prerender = true and stuff...
