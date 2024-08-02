@@ -7,11 +7,11 @@ export const ssr = true;
 export const csr = true;
 
 export const load: PageLoad = async ({ fetch }) => {
-	let canonicalPaintings = allPaintings.filter((painting) => painting.category === 'canonical');
-	if (!canonicalPaintings) {
-		throw error(404, 'No canonical paintings found.');
+	let otherPaintings = allPaintings.filter((painting) => painting.category === 'other');
+	if (!otherPaintings) {
+		throw error(404, 'No other art found.');
 	}
-	const response = new json(canonicalPaintings);
+	const response = new json(otherPaintings);
 	const paintings = await response.json();
 	return {
 		paintings: paintings

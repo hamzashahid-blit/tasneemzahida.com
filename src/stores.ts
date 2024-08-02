@@ -23,6 +23,6 @@ function storable(name, data) {
 	};
 }
 
-export const visualScrollPos = storable('visualScrollPos', 0);
-export const canonicalScrollPos = storable('canonicalScrollPos', 0);
+export const mainScrollPos = storable('mainScrollPos', 0);
+export const otherScrollPos = storable('otherScrollPos', 0);
 export const calligraphyScrollPos = storable('calligraphyScrollPos', 0);

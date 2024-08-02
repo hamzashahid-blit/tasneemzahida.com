@@ -17,7 +17,7 @@ export const load: PageLoad = async ({ fetch }) => {
 		throw error(404, 'We could not find all paintings.');
 	}
 	let carouselPaintings: Painting[] = Paintings.filter(
-		(painting) => painting.category === 'visual'
+		(painting) => painting.category === 'main'
 	);
 	return {
 		events: recentEvents,

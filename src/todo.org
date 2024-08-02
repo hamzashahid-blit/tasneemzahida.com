@@ -35,7 +35,7 @@ CLOSED: [2023-10-21 Sat 10:24]
 ** TODO Add a carousel in place of About Me section to show Visual Da'wah
 ** TODO Add left & right buttons to carousel
 ** DONE Replace Phone icon with Whatsapp icon in Contacts
-** TODO Bottom paintings load first and keep on moving in category grid
+** TODO [#C] Bottom paintings load first and keep on moving in category grid
 ** TODO Make order of paintings less random to keep best on top
 ** TODO Create a SOLD badge for paintings no longer available
 ** TODO [SS] Show name of painting on scroll

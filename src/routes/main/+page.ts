@@ -7,11 +7,11 @@ export const ssr = true;
 export const csr = true;
 
 export const load: PageLoad = async ({ fetch }) => {
-	let visualPaintings = allPaintings.filter((painting) => painting.category === 'visual');
-	if (!visualPaintings) {
-		throw error(404, "No Visual Da'wah found.");
+	let mainPaintings = allPaintings.filter((painting) => painting.category === 'main');
+	if (!mainPaintings) {
+		throw error(404, "No Main Paintings found.");
 	}
-	const response = new json(visualPaintings);
+	const response = new json(mainPaintings);
 	const paintings = await response.json();
 	return {
 		paintings: paintings

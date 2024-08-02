@@ -150,42 +150,42 @@
 
 	{
 		"id": "indirect-painting",
-		"category": "canonical",
+		"category": "other",
 		"filename": "indirect-painting.jpeg",
 		"title": "Indirect Painting",
 		"description": "Thin glazes of different paints are applied on top of a monochromatic underpainting to bring out the intense hues and beautiful textures."
 	},
 	{
 		"id": "mason-jar",
-		"category": "canonical",
+		"category": "other",
 		"filename": "mason-jar.jpeg",
 		"title": "Mason Jar",
 		"description": "Another piece executed entirely in different shades of brown, referring to the technique \"Brunaille\", a French term used for such paintings. It's a great way to start painting in some contrast and tonal values"
 	},
 	{
 		"id": "forest-river",
-		"category": "canonical",
+		"category": "other",
 		"filename": "forest-river.jpeg",
 		"title": "Forest River",
 		"description": "From above the bridge, the sparkling stream running through a local park inspired me to capture the bright greens and shadows on my canvas."
 	},
 	{
 		"id": "observational-value-study",
-		"category": "canonical",
+		"category": "other",
 		"filename": "observational-value-study.jpeg",
 		"title": "Observational Value Study",
 		"description": "Monochromatic landscape made for the study of tonal values"
 	},
 	{
 		"id": "after-the-party",
-		"category": "canonical",
+		"category": "other",
 		"filename": "after-the-party.jpeg",
 		"title": "After the Party",
 		"description": "A chaotic themed study from my abstract course, where I have used a variety of household objects from birthday candles to painted noodles and pasta in order to represent a range of colors."
 	},
 	{
 		"id": "impasto",
-		"category": "canonical",
+		"category": "other",
 		"filename": "impasto.jpeg",
 		"title": "Impasto",
 		"description": "Freshly squeezed thick paint has been applied to bring out the texture and freshness of the shrubbery."

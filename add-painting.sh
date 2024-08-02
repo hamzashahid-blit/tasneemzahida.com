@@ -22,9 +22,9 @@ read -p "Enter filename (without extension): " filename
 
 # Category
 echo "Category selection;"
-echo "1. Visual Da'wah"
+echo "1. Main Gallery"
 echo "2. Calligraphy"
-echo "3. Canonical"
+echo "3. Other"
 
 while [[ $category != [123] ]]; do
 	read -p "Enter category: " category
@@ -32,13 +32,13 @@ done
 
 case "$category" in
     1 )
-        category="visual"
+        category="main"
         ;;
     2 )
 		category="calligraphy"
 		;;
     3 )
-		category="canonical"
+		category="other"
 		;;
 esac
 
