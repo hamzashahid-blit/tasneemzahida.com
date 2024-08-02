@@ -25,7 +25,7 @@
     <div class="bar"></div>
     <div class="bar"></div>
   </button>
-  <div id="nav-bg" class="h-[32rem] w-full absolute z-10"></div>
+  <div id="nav-bg" class="h-[32rem] lg:h-[1rem] w-full absolute z-10"></div>
 </nav>
 
 <style>
