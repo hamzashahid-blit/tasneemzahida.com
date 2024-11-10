@@ -20,7 +20,4 @@ module.exports = {
 	  "barcelony": ["Barcelony", "serif"],
     }
   },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-  ],
 }

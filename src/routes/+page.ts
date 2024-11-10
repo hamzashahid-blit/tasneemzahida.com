@@ -1,4 +1,3 @@
-import { json } from '@sveltejs/kit';
 import Paintings from '$lib/assets/paintings.json';
 import Events from '$lib/assets/events.json';
 import type { Painting } from 'src/types/Painting';

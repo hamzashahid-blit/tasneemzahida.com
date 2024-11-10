@@ -2,8 +2,6 @@
   let active: boolean = false;
 </script>
 
-<!-- TODO: PLZ MOVE LINKS TOGETHER --> <!-- ??? In mobile??? what is this comment about? -->
-<!-- TODO: Add box shadow -->
 <!-- HEIGHT OF NAVBAR: theme(space.28) -->
 <nav class="flex justify-evenly items-center text-primary mb-8 transition-all duration-300 ease-in-out z-20" class:active>
   <a href="/" class="lg:order-2 max-w-[18em] w-[63vw] mx-5 z-20
@@ -20,7 +18,7 @@
 	<li data-sveltekit-prefetch><a href="/contacts">Contact Me</a></li>
   </ul>
   <button class="lg:absolute lg:invisible order-2 lg:order-last ml-auto mr-4 flex flex-col space-y-1 antialiased no_highlights z-20"
-		  on:click="{() => active = !active}">
+		  on:click="{() => active = !active}" aria-label="Navigation Menu">
     <div class="bar"></div>
     <div class="bar"></div>
     <div class="bar"></div>

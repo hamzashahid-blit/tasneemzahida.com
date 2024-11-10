@@ -13,13 +13,13 @@ CLOSED: [2023-10-21 Sat 10:24]
   Just had to add tailwind class "whitespace-pre-wrap" to description
 :END:
 
-** TODO [#B] Back button wierd at different zoom sizes...
+** DONE [#B] Back button weird at different zoom sizes...
    Probably cz of translation to HTML. See [[https://stackoverflow.com/questions/43097752/javascript-new-line-n-not-effective-while-pulling-in-json-from-external-fil][this]] SO question.
 ** TODO [#Q] Sort the random prerender = true and stuff...
 ** TODO [#Z] Dark mode
 ** DONE Resize each painting to fit it's width forcefully
 ** DONE Fix the size of the gradient on painting hover
-** TODO Make sure painting doesn't move based on the size of description
+** DONE Make sure painting doesn't move based on the size of description
 ** DONE Make sure that title of the painting doesn't move on to newline
 ** DONE Complete "Contact Me" page
 ** DONE Style each event page
@@ -31,7 +31,6 @@ CLOSED: [2023-10-21 Sat 10:24]
 ** DONE [SS] Events Page
 ** DONE [SS] events/[ID] Pages
 ** DONE [BS] Make Paintings more prominent
-** HALT Give About Me section a separate page
 ** TODO Add a carousel in place of About Me section to show Visual Da'wah
 ** TODO Add left & right buttons to carousel
 ** DONE Replace Phone icon with Whatsapp icon in Contacts

@@ -1,19 +1,14 @@
-<!-- TODO: Fix dropshadow so that it is not only covering the bottom but all around -->
-
 <div id="categories" class="flex flex-col items-center justify-center">
   <div id="main" alt="A painting showing main gallery">
 	<h1>Main Gallery</h1>
-	<!-- <p>Main artwork. Illustration of a calligraphic verse. Nullam tempus. Curabitur lacinia pulvinar nibh. Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus</p> -->
 	<a href="/main" data-sveltekit-prefetch>View more</a>
   </div>
   <div id="calligraphy" alt="A painting showing calligraphy">
 	<h1>Calligraphy</h1>
-    <!-- <p>Second artwork. Just a calligraphic verse. Nullam tempus. Curabitur lacinia pulvinar nibh. Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus</p> -->
 	<a href="/calligraphy" data-sveltekit-prefetch>View more</a>
   </div>
   <div id="other" alt="A painting showing other art">
 	<h1>Other Art</h1>
-	<!-- <p>Other artwork. Random artwork. Nullam tempus. Curabitur lacinia pulvinar nibh. Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus curabitur</p> -->
 	<a href="/other" data-sveltekit-prefetch>View more</a>
   </div>
 </div>
@@ -39,9 +34,6 @@
   }
   h1 {
 	@apply text-5xl lg:text-6xl mb-2
-  }
-  p {
-    @apply text-xl lg:text-2xl
   }
   a {
     @apply text-white text-lg md:text-2xl border-2 border-white rounded-full px-4 py-1 mt-2 transition-all duration-200 hover:text-primary hover:bg-white
