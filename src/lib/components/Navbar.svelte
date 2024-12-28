@@ -18,7 +18,7 @@
 	<li data-sveltekit-prefetch><a href="/contacts">Contact Me</a></li>
   </ul>
   <button class="lg:absolute lg:invisible order-2 lg:order-last ml-auto mr-4 flex flex-col space-y-1 antialiased no_highlights z-20"
-		  on:click="{() => active = !active}" aria-label="Navigation Menu">
+		  onclick="{() => active = !active}" aria-label="Navigation Menu">
     <div class="bar"></div>
     <div class="bar"></div>
     <div class="bar"></div>
