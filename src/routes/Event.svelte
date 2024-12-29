@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { EventBlog } from "src/types/EventBlog";
-  import EventFooter from "$lib/components/EventFooter.svelte";
+  import type { EventBlog } from "$mytypes/EventBlog";
+  import EventFooter from "$components/EventFooter.svelte";
 
   export let event: EventBlog;
 </script>

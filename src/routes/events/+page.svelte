@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Event from "$lib/components/Event.svelte";
-  import EventFooter from "$lib/components/EventFooter.svelte";
-  import type { EventBlog } from "src/types/EventBlog";
   import type { PageData } from "./$types";
+  import type { EventBlog } from "$mytypes/EventBlog";
+  import Event from "$components/Event.svelte";
+  import EventFooter from "$components/EventFooter.svelte";
 
   export let data: PageData;
   const events: EventBlog[] = data.events;

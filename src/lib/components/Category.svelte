@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { Painting } from "src/types/Painting";
+  import type { Painting } from "$mytypes/Painting";
 
-  export let categoryName: string;
-  export let paintings: Painting[];
-  paintings.map((p) => (console.log(p.title)))
+  const { categoryName,  paintings }: { categoryName: string,  paintings: Painting[] } = $props();
+  export const ssr = false;
+  export const csr = false;
 </script>
 
 <div class="min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.14))]
@@ -14,7 +14,11 @@
 	  <a data-sveltekit-prefetch href="/paintings/{id}">
 	    <div class="brick before:content-[''] before:absolute before:w-full before:h-1/2 lg:before:top-full before:left-0 before:bg-gradient-to-b before:from-transparent before:to-[rgb(0,0,0,0.4)] before:transition-all before:duration-300 before:top-1/2 order-last place-self-start
 				    relative mb-8 transition-all overflow-hidden rounded-sm">
-		  <img class="w-full" src={new URL(`/src/lib/assets/${category}/${filename}`, import.meta.url).href} alt={title}>
+          <!-- <\!-- Extension is necessary... so everything must be a jpeg I guess... -\-> -->
+          <!-- {#await import(`../assets/${category}/${filename.replace(/\.[^/.]+$/, "")}.jpeg`) then { default: src }} -->
+          <!--   <img class="w-full" {src} alt={title}> -->
+          <!-- {/await} -->
+          <img class="w-full" src={new URL(`/src/lib/assets/${category}/${filename.replace(/\.[^/.]+$/, "")}.jpeg`, import.meta.url).href} alt={title}>
 		  <h2 class="absolute bottom-3 left-5 pr-7 text-white text-2xl lg:text-3xl text-heading w-full text-left transition-all">{title}</h2>
 	    </div>
 	  </a>

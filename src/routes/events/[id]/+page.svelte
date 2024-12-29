@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { EventBlog } from "src/types/EventBlog";
+  import type { EventBlog } from "$mytypes/EventBlog";
   import type { PageData } from "./$types";
 
   export let data: PageData;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Painting } from "src/types/Painting";
+  import type { Painting } from "$mytypes/Painting";
   export let paintings: Painting[]
 </script>
 

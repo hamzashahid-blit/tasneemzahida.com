@@ -1,15 +1,19 @@
-import { json, error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import Paintings from '$lib/assets/paintings.json';
+import type { Painting } from '$mytypes/Painting';
+import { json, error } from '@sveltejs/kit';
+import paintings from '$assets/paintings.json';
+
+export const prerender = true;
+export const csr = true;
+export const ssr = false;
 
 export const load: PageLoad = async ({ fetch, params }) => {
-	if (!Paintings) {
-		throw error(404, 'We could not find all paintings.');
+	if (!paintings) {
+		throw error(404, 'We could not find any painting.');
 	}
-	// TODO: Convert appropriate variables to const.
-	const response = new json(Paintings);
-	const paintings = await response.json();
-	const painting = paintings.find((painting) => params.id === painting.id);
+	const painting: Painting | undefined = paintings.find(
+        (painting) => params.id === painting.id
+    );
 	if (!painting) {
 		throw error(404, 'We could not find the painting you were looking for.');
 	}

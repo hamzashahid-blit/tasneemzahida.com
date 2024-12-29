@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Category from "$lib/components/Category.svelte"
   import type { PageData } from "./$types"
+  import Category from "$lib/components/Category.svelte"
 
-  export let data: PageData;
+  let { data }: { data: PageData } = $props();
 </script>
 
 <title>Tasneem Zahida: All Paintings</title>

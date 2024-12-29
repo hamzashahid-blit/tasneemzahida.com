@@ -1,6 +1,6 @@
 <script lang="ts">
+  import type { EventBlog } from "$mytypes/EventBlog";
   import Event from "./Event.svelte";
-  import type { EventBlog } from "src/types/EventBlog";
 
   export let events: EventBlog[];
 </script>
