@@ -1,5 +1,5 @@
 <script lang="ts">
-  let active: boolean = false;
+  let active = false;
 </script>
 
 <!-- HEIGHT OF NAVBAR: theme(space.28) -->

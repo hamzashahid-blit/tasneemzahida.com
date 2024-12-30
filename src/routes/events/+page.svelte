@@ -4,20 +4,20 @@
   import Event from "$components/Event.svelte";
   import EventFooter from "$components/EventFooter.svelte";
 
-  export let data: PageData;
+  let { data }: { data: PageData } = $props();
   const events: EventBlog[] = data.events;
   let firstEvent: EventBlog;
-  if (events.length > 0){
+  if (events?.length > 0){
     firstEvent = data.events[0];
   }
 </script>
 
 <title>Tasneem Zahida: Events</title>
-{#if events.length > 0}
+{#if events?.length > 0}
   <div class="min-h-[calc(100vh-theme(space.28)-theme(space.7))]
 			  lg:min-h-[calc(100vh-theme(space.28)-theme(space.28)-theme(space.28)-theme(space.10))]
 			  mb-10 lg:my-28 mx-4 lg:mx-60">
-    <h1 class="text-5xl lg:text-hxl text-primary w-full invisible md:visible">Events</h1>
+    <h1 class="text-5xl md:mb-8 lg:text-hxl text-primary w-full invisible md:visible">Events</h1>
 	<!-- First Event -->
     <a data-sveltekit-prefetch class="transition-all duration-300 fixed lg:relative invisible lg:visible" href="/events/{firstEvent.id}">
 	  <div class="before:content-[''] before:absolute before:h-1/2 before:w-full before:bg-gradient-to-b before:top-3/4 before:from-transparent before:to-[rgb(0,0,0,0.7)] before:transition-all before:duration-300
@@ -32,7 +32,7 @@
 	    </div>
 	  </div>
     </a>
-    <div class="grid lg:grid-cols-4 md:grid-cols-3 gap-10 justify-center">
+    <div class="grid lg:grid-cols-3 md:grid-cols-3 gap-10 justify-center">
       <h1 class="text-5xl lg:text-hxl text-primary w-full md:invisible md:fixed">Events</h1>
 	  <!-- Mobile first Event -->
 	  <div class="visible lg:invisible lg:fixed">
@@ -45,7 +45,7 @@
     </div>
   </div>
 {:else}
-  <div class="min-h-[calc(100vh-theme(space.28)-theme(space.10))] w-full flex items-center justify-center mb-10 -my-10">
+  <div class="min-h-[calc(100vh-theme(space.28)-theme(space.14))] w-full flex items-center justify-center mb-10 -my-10">
     <h1 class="text-5xl text-primary">No Events...</h1>
   </div>
 {/if}
