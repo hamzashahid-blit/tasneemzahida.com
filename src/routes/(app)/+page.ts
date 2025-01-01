@@ -5,7 +5,7 @@ import { error } from '@sveltejs/kit';
 import Paintings from '$assets/paintings.json';
 import Events from '$assets/events.json';
 
-export const ssr = true;
+export const ssr = false;
 export const csr = true;
 
 export const load: PageLoad = async ({ fetch }) => {

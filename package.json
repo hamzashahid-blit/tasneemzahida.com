@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@picocss/pico": "^2.0.6",
 		"browserify-fs": "^1.0.0",
 		"marked": "^15.0.4",
 		"svelte-awesome": "^3.3.5"

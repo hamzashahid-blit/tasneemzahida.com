@@ -16,4 +16,4 @@
 	{date.getDate()}<sup>{ordinalSuffix(date.getDate())}</sup>
 	{months[date.getMonth()]} {date.getFullYear()}
 </span>
-<span>• {Math.trunc(textLength / 200)}m read</span>
+<span>• {Math.trunc(textLength / 15 / 60)}m read</span>
