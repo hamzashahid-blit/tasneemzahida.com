@@ -5,7 +5,7 @@
   export let events: EventBlog[];
 </script>
 
-<div class="flex flex-col justify-center h-max lg:h-[120vh] mt-32 lg:mt-0">
+<div class="flex flex-col justify-center h-max mx-10 lg:h-[120vh] mt-32 lg:mt-0">
   <!-- <h1 class="text-hxl text-primary text-center mb-20">Events Coming Soon...</h1> -->
   <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-[4%] space-y-10 lg:space-y-0">
 	{#each events as event}

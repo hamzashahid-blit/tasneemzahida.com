@@ -14,7 +14,7 @@
 <!-- <Carousel {paintings}/> -->
 <AboutMe/>
 <Categories/>
-<!-- <RecentEvents {events}/> -->
+<RecentEvents {events}/>
 <!-- <div class="flex flex-col justify-center h-[100vh]"> -->
 <!--   <h1 class="text-5xl md:text-hxl text-primary text-center mb-20 mx-8 leading-none">Events Coming Soon...</h1> -->
 <!-- </div> -->
