@@ -14,8 +14,8 @@
 
 <title>Event: {event.title}</title>
 <div class="flex flex-col justify-center mx-4 lg:mx-60 my-12 lg:my-28">
-  <h1 class="text-5xl lg:text-hxl text-primary">{event.title}</h1>
-  <img class="rounded-sm lg:rounded-md mt-5 mb-10" src={new URL(`/src/lib/assets/events/${event.id}.png`, import.meta.url).href} alt="About the event">
+  <h1 class="text-4xl md:text-5xl lg:text-hxl text-primary">{event.title}</h1>
+  <img class="rounded-[0.3rem] md:rounded-md mt-5 mb-10" src={new URL(`/src/lib/assets/events/${event.id}.png`, import.meta.url).href} alt="About the event">
   <div id="md" class="text-primary">{@html event.content}</div>
 </div>
 
