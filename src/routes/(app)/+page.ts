@@ -10,11 +10,11 @@ export const csr = true;
 
 export const load: PageLoad = async ({ fetch }) => {
 	if (!Events) {
-		throw error(404, 'We could not find all events.');
+		throw error(404, 'We could not find any event.');
 	}
 	const recentEvents: EventBlog[] = Events.slice(0, 4);
 	if (!Paintings) {
-		throw error(404, 'We could not find all paintings.');
+		throw error(404, 'We could not find any painting.');
 	}
 	const carouselPaintings: Painting[] = Paintings.filter(
 		(painting) => painting.category === 'main'
