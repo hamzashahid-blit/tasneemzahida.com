@@ -1,17 +1,17 @@
 import type { PageLoad } from './$types';
-import type { EventBlog } from '$mytypes/EventBlog';
+import type { Event } from '$mytypes/Event';
 import { error, json } from '@sveltejs/kit';
 import { marked } from 'marked';
-import Events from '$assets/events.json';
+import allEvents from '$assets/events.json';
 
-export const ssr = true;
+export const ssr = false;
 export const csr = true;
 
 export const load: PageLoad = async ({ fetch, params }) => {
-	if (!Events) {
+	if (!allEvents) {
 		throw error(404, 'We could not find all events.');
 	}
-	const event: EventBlog | undefined = Events.find(
+	const event: Event | undefined = allEvents.find(
         (event) => event.id === params.id
     );
 	if (!event) {

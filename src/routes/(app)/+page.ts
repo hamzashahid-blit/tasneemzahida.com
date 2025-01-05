@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
 import type { Painting } from '$mytypes/Painting';
-import type { EventBlog } from '$mytypes/EventBlog';
+import type { Event } from '$mytypes/Event';
 import { error } from '@sveltejs/kit';
 import Paintings from '$assets/paintings.json';
 import Events from '$assets/events.json';
@@ -12,7 +12,7 @@ export const load: PageLoad = async ({ fetch }) => {
 	if (!Events) {
 		throw error(404, 'We could not find any event.');
 	}
-	const recentEvents: EventBlog[] = Events.slice(0, 4);
+	const recentEvents: Event[] = Events.slice(0, 4);
 	if (!Paintings) {
 		throw error(404, 'We could not find any painting.');
 	}

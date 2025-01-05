@@ -1,5 +1,5 @@
 import type { PageLoad } from './$types';
-import type { EventBlog } from '$mytypes/EventBlog';
+import type { Event } from '$mytypes/Event';
 import { error, json } from '@sveltejs/kit';
 import events from '$assets/events.json';
 

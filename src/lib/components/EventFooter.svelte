@@ -2,7 +2,7 @@
   let { date, textLength }: { date: Date, textLength: number } = $props();
 
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  function ordinalSuffix(i: number) {
+  function ordinalSuffix(i: number): string {
   	let j: number = i % 10,
   		k: number = i % 100;
 	return (j == 1 && k != 11) ? "st"
@@ -12,7 +12,7 @@
 </script>
 
 <span>
-	{date.getDate()}<sup>{ordinalSuffix(date.getDate())}</sup>
-	{months[date.getMonth()]} {date.getFullYear()}
+  {date.getDate()}<sup>{ordinalSuffix(date.getDate())}</sup>
+  {months[date.getMonth()]} {date.getFullYear()}
 </span>
 <span>• {Math.trunc(textLength / 15 / 60)}m read</span>
