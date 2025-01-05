@@ -1,8 +1,7 @@
 <script lang="ts">
-  export let date: Date;
-  export let textLength: number;
+  let { date, textLength }: { date: Date, textLength: number } = $props();
 
-  let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   function ordinalSuffix(i: number) {
   	let j: number = i % 10,
   		k: number = i % 100;
