@@ -48,7 +48,7 @@ export const actions: Actions = {
 	        content: content,
         }
 
-        if (!supportedImageTypes.includes(file.type)) {
+        if (!supportedImageTypes.includes(file!.type)) {
             errors.picture = `Unsupported image file type.`
         }
         if (areErrors(errors)) return createFail(data, errors, file);
@@ -177,7 +177,7 @@ export const actions: Actions = {
             description: formDescription,
         }
 
-        if (!supportedImageTypes.includes(file.type)) {
+        if (!supportedImageTypes.includes(file!.type)) {
             errors.picture = `Unsupported image file type.`;
         }
         if (areErrors(errors)) return createFail(data, errors, file);
