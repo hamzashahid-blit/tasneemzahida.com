@@ -11,10 +11,10 @@
   <ul id="paintings" class="lg:order-1 z-30">
     <li data-sveltekit-prefetch><a href="/main">Main Gallery</a></li>
     <li data-sveltekit-prefetch><a href="/calligraphy">Calligraphy</a></li>
+    <li data-sveltekit-prefetch><a href="/other">Other Art</a></li>
   </ul>
   <ul id="others" class="lg:order-3 z-30">
-	<!-- <li data-sveltekit-prefetch><a href="/events">Events</a></li> -->
-    <li data-sveltekit-prefetch><a href="/other">Other Art</a></li>
+	<li data-sveltekit-prefetch><a href="/events">Events</a></li>
 	<li data-sveltekit-prefetch><a href="/contacts">Contact Me</a></li>
   </ul>
   <button class="lg:absolute lg:invisible order-2 lg:order-last ml-auto mr-4 flex flex-col space-y-1 antialiased no_highlights z-20"
