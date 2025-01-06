@@ -19,7 +19,8 @@ export const load: PageLoad = async ({ fetch, params }) => {
 		throw error(404, 'We could not find the event you were looking for.');
 	}
     console.log(event.content);
-	event.content = await DOMPurify.sanitize(marked.parse(event.content));
+    const md = await marked.parse(event.content);
+	event.content = await DOMPurify.sanitize(md);
     console.log(event.content);
 	return {
 		event: event
