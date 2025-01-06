@@ -1,12 +1,12 @@
 <script lang="ts">
   import type { PageData } from "./$types";
-  import type { EventBlog } from "$mytypes/EventBlog";
+  import type { Event } from "$mytypes/Event";
   import Event from "$components/Event.svelte";
   import EventFooter from "$components/EventFooter.svelte";
 
   let { data }: { data: PageData } = $props();
-  const events: EventBlog[] = data.events;
-  let firstEvent: EventBlog;
+  const events: Event[] = data.events;
+  let firstEvent: Event;
   if (events?.length > 0){
     firstEvent = data.events[0];
   }

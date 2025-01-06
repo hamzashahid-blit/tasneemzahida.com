@@ -3,7 +3,6 @@ import type { Event } from '$mytypes/Event';
 import { error, json } from '@sveltejs/kit';
 import events from '$assets/events.json';
 
-export const prerender = true;
 export const ssr = false;
 export const csr = true;
 
