@@ -1,18 +1,22 @@
 <script lang="ts">
   import type { Painting } from '$mytypes/Painting';
+  import type { Event } from '$mytypes/Event';
   
-  let { painting, onclick, selected }: {
-    painting: Painting,
+  let { result, onclick, selected }: {
+    result: Painting | Event,
     onclick: Function,
     selected: boolean,
   } = $props();
-  let { id, category, filename, title, description } = painting;
+
+  const url = `/src/lib/assets/${Object.hasOwn(result, 'content')
+                                   ? `events/${result.picture}`
+                                   : `${result.category}/${result.filename}`}`;
 </script>
 
-<div class={selected ? 'selected' : ''}>
-  <button class={selected ? 'selected outline' : 'outline'} {onclick}>
-    <img src={new URL(`/src/lib/assets/${category}/${filename}`, import.meta.url).href} alt={title}>
-    <h3>{title}</h3>
+<div class={{selected}}>
+  <button class={['outline', {selected}]} {onclick}>
+    <img src={new URL(url, import.meta.url).href} alt={result.title}>
+    <h3>{result.title}</h3>
   </button>
   {#if selected}
     <small>Click again to de-select</small>

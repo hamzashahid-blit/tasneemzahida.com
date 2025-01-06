@@ -20,9 +20,11 @@
   let currMode: string = $state(Mode.Painting);
   let currCrud: string = $state(Crud.Add);
   let aOrAn: string = $derived(isVowel(currMode[0]) ? 'an' : 'a');
-  let selectedPainting: Painting = $state(null);
+  let selectedPainting: Painting | null = $state(null);
+  let selectedEvent: Event | null = $state(null);
   const formEnhance = async ({ formData }) => {
     formData.append('selectedPaintingId', selectedPainting?.id ?? '');
+    formData.append('selectedEventId', selectedEvent?.id ?? '');
   }
 </script>
 
@@ -34,64 +36,88 @@
 <article>
   <h1>{currCrud} {aOrAn} {currMode}</h1>
   <!-- TODO: Figure out why use:enhance is doing full-page reloads -->
-  <form method="POST" enctype="multipart/form-data" use:enhance={formEnhance}>
+  <form method="POST" enctype="multipart/form-data" action={`?/${currCrud.toLowerCase()}${currMode}`} use:enhance={formEnhance}>
     <fieldset>
-      {#if currCrud === Crud.Update || currCrud === Crud.Remove}
-        <Search paintings={data.paintings}
-                bind:selectedPainting
-                placeholder={`Search for ${aOrAn} ${currMode} to ${currCrud}`}
-                {form} />
+      {#if [Crud.Update, Crud.Remove].includes(currCrud)}
+        {#if currMode === Mode.Painting}
+          <Search items={data.paintings}
+                  bind:selected={selectedPainting}
+                  placeholder={`Search for ${aOrAn} ${currMode} to ${currCrud}`}
+                  {form} />
+        {:else if currMode === Mode.Event}
+          <Search items={data.events}
+                  bind:selected={selectedEvent}
+                  placeholder={`Search for ${aOrAn} ${currMode} to ${currCrud}`}
+                  {form} />                
+        {/if}
       {/if}
-      {#if currCrud === Crud.Add || currCrud === Crud.Update}
+      {#if [Crud.Add, Crud.Update].includes(currCrud)}
         <label>
           Title
           <input
             type="text"
             name="title"
-            value={selectedPainting?.title}
+            value={selectedPainting?.title ?? selectedEvent?.title}
             placeholder={`Title of the ${currMode} to ${currCrud}`}
             aria-label={`Title of the ${currMode} to ${currCrud}`}
             aria-invalid={form ? (form.errors?.title ? "true" : "false") : null}
             aria-describedby="title-helper">
           <small id="title-helper">{form?.errors?.title}</small>
         </label>
+        {#if currMode === Mode.Event}
+          <label>
+            Date
+            <input
+              type="date"
+              name="date"
+              aria-label="Date"
+              aria-invalid={form ? (form.errors?.date ? "true" : "false") : null}
+              aria-describedby="date-helper"
+              value={(currCrud === Crud.Update && selectedEvent)
+              ? selectedEvent.date
+              : currCrud === Crud.Add ? (new Date()).toJSON().split('T')[0] : ''}>
+            <small id="date-helper">{form?.errors?.date}</small>
+          </label>
+        {/if}
       {/if}
-      {#if currCrud === Crud.Add }
-        <label>
-          Category
-          <select name="category"
-                  aria-label="Select painting category..."
-                  aria-invalid={form ? (form.errors?.category ? "true" : "false") : null}
-                  aria-describedby="category-helper">
-            <option selected disabled value="">Select painting category...</option>
-            <option value="main">Main</option>
-            <option value="calligraphy">Calligraphy</option>
-            <option value="other">Other Artwork</option>
-          </select>
-          <small id="category-helper">{form?.errors?.category}</small>
-        </label>
-      {:else if currCrud === Crud.Update }
-        <label>
-          Category
-          <select name="category"
-                  aria-label="Select painting category..."
-                  aria-invalid={form ? (form.errors?.category ? "true" : "false") : null}
-                  aria-describedby="category-helper">
-            <option selected={!selectedPainting} disabled value="">Select painting category...</option>
-            <option selected={selectedPainting?.category?.toLowerCase() === "main"}
-                    value="main"
-                    >Main</option>
-            <option selected={selectedPainting?.category?.toLowerCase() === "calligraphy"}
-                    value="calligraphy"
-                    >Calligraphy</option>
-            <option selected={selectedPainting?.category?.toLowerCase() === "other"}
-                    value="other"
-                    >Other Artwork</option>
-          </select>
-          <small id="category-helper">{form?.errors?.category}</small>
-        </label>
+      {#if currMode === Mode.Painting}
+        {#if currCrud === Crud.Add}
+          <label>
+            Category
+            <select name="category"
+                    aria-label="Select painting category..."
+                    aria-invalid={form ? (form.errors?.category ? "true" : "false") : null}
+                    aria-describedby="category-helper">
+              <option selected disabled value="">Select painting category...</option>
+              <option value="main">Main</option>
+              <option value="calligraphy">Calligraphy</option>
+              <option value="other">Other Artwork</option>
+            </select>
+            <small id="category-helper">{form?.errors?.category}</small>
+          </label>
+        {:else if currCrud === Crud.Update}
+          <label>
+            Category
+            <select name="category"
+                    aria-label="Select painting category..."
+                    aria-invalid={form ? (form.errors?.category ? "true" : "false") : null}
+                    aria-describedby="category-helper">
+              <option selected={!selectedPainting} disabled value="">Select painting category...</option>
+              <option selected={selectedPainting?.category?.toLowerCase() === "main"}
+                      value="main"
+                      >Main</option>
+              <option selected={selectedPainting?.category?.toLowerCase() === "calligraphy"}
+                      value="calligraphy"
+                      >Calligraphy</option>
+              <option selected={selectedPainting?.category?.toLowerCase() === "other"}
+                      value="other"
+                      >Other Artwork</option>
+            </select>
+            <small id="category-helper">{form?.errors?.category}</small>
+          </label>
+        {/if}
       {/if}
-      {#if currCrud === Crud.Add || currCrud === Crud.Update}
+      {#if [Crud.Add, Crud.Update].includes(currCrud)}
         <!-- TODO: FIX Label/input moves to the right when invalid -->
         <label id="picture-label">
           Picture
@@ -99,7 +125,8 @@
             type="file"
             name="picture"
             aria-invalid={form ? (form.errors?.picture ? "true" : "false") : null}
-            aria-describedby="picture-helper">
+            aria-describedby="picture-helper"
+            accept="image/png, image/jpeg, image/gif, image/tiff, image/bpm, image/x-icon, image/apng, image/avif, image/svg, image/webp">
           <small id="picture-helper">{form?.errors?.picture}</small>
         </label>
         <label>
@@ -110,14 +137,30 @@
             aria-label={`Describe your ${currMode}`}
             aria-invalid={form ? (form.errors?.description ? "true" : "false") : null}
             aria-describedby="description-helper"
-            >{(currCrud === Crud.Update && selectedPainting)
-            ? selectedPainting.description
-            : ''}</textarea>
+            >{currMode === Crud.Painting
+            ? (currCrud === Crud.Update && selectedPainting ? selectedPainting.description : '')
+            : (currCrud === Crud.Update && selectedEvent ? selectedEvent.description : '')}</textarea>
           <small id="description-helper">{form?.errors?.description}</small>
         </label>
+        {#if currMode === Mode.Event}
+          <label>
+            Content
+            <textarea
+              name="content"
+              placeholder={`Describe your ${currMode}`}
+              aria-label={`Describe your ${currMode}`}
+              aria-invalid={form ? (form.errors?.content ? "true" : "false") : null}
+              aria-describedby="content-helper"
+              >{(currCrud === Crud.Update && selectedEvent)
+              ? selectedEvent.content
+              : ''}</textarea>
+            <small id="content-helper">{form?.errors?.content}</small>
+          </label>
+        {/if}
       {/if}
     </fieldset>
-    <button formaction={`?/${currCrud.toLowerCase()}${currMode}`}
+    <!-- formaction={`?/${currCrud.toLowerCase()}${currMode}`} -->
+    <button 
             name="submit"
             aria-invalid={form ? (form.errors?.description ? "true" : "false") : null}
             aria-describedby="submit-helper"

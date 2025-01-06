@@ -1,18 +1,21 @@
 <script lang="ts">
   import type { Painting } from '$mytypes/Painting';
+  import type { Event } from '$mytypes/Event';
   import fuzzysort from 'fuzzysort';
   import Result from './Result.svelte';
   
-  let { paintings, selectedPainting = $bindable(null), placeholder, form }: {
-    paintings: Painting[],
-    selectedPainting: Painting,
+  let { items, selected = $bindable(null), placeholder, form }: {
+    items: Painting[] | Event[],
+    selected: Painting | Event | null,
     placeholder: string,
     form: FormData,
   } = $props();
   let searchQuery: string = $state('');
-  let resultPaintings: Painting[] = $derived(
-    fuzzysort.go(searchQuery, paintings, {
-      keys: ['title', 'description'],
+  let results: Painting[] | Event[] = $derived(
+    fuzzysort.go(searchQuery, items, {
+      keys: Object.hasOwn(items[0], 'content')
+        ? ['title', 'description']
+        : ['title', 'description', 'date', 'content'],
     }).map(r => r.obj)
   );
 </script>
@@ -25,18 +28,20 @@
     {placeholder}
     aria-label={placeholder}
     bind:value={searchQuery}
-    aria-invalid={form ? (form?.errors?.search ? "true" : "false") : null}
+    aria-invalid={form ? (form.errors?.search ? "true" : "false") : null}
     aria-describedby="search-helper"/>
   <small id="search-helper">{form?.errors?.search}</small>
 </label>
-{#if !selectedPainting}
+{#if !selected}
   <section>
-    {#each resultPaintings as painting (painting.id)}
-      <Result {painting} onclick={() => selectedPainting = painting} />
+    {#each results as result (result.id)}
+      <Result {result} onclick={() => selected = result} />
     {/each}
   </section>
 {:else}
-  <Result painting={selectedPainting} onclick={() => selectedPainting = null} selected={true} />
+  <Result result={selected}
+          onclick={() => selected = null}
+          selected={true} /> <!-- TODO: can we just remove the `={true}`? -->
 {/if}
 
 <style>
