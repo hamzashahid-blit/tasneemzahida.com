@@ -1,1 +1,0 @@
-The Fundraiser was held by Human Concern, which is Canada’s first Muslim charity, to help aid the victims in Syria & Palestine, as well as raise proceeds to aid local NGOs. As part of the fundraiser, I was able to auction some of my artwork and calligraphy pieces in support of the cause
