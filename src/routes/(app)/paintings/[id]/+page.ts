@@ -1,13 +1,12 @@
 import type { PageLoad } from './$types';
 import type { Painting } from '$mytypes/Painting';
-import { json, error } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 import paintings from '$assets/paintings.json';
 
-export const prerender = true;
 export const csr = true;
 export const ssr = false;
 
-export const load: PageLoad = async ({ fetch, params }) => {
+export const load: PageLoad = async ({ params }) => {
 	if (!paintings) {
 		throw error(404, 'We could not find any painting.');
 	}

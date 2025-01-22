@@ -8,14 +8,17 @@
     selected: boolean,
   } = $props();
 
-  const url = `/src/lib/assets/${Object.hasOwn(result, 'content')
-                                   ? `events/${result.picture}`
-                                   : `${result.category}/${result.filename}`}`;
+  // console.log(paintingUrl, eventUrl, Object.hasOwn(result, 'content'), `events/${result.picture}`, `${result.category}/${result.filename}`, result, new URL(`/src/lib/assets/${paintingUrl}`, import.meta.url), new URL(`/src/lib/assets/${eventUrl}`, import.meta.url));
 </script>
 
 <div class={{selected}}>
   <button class={['outline', {selected}]} {onclick}>
-    <img src={new URL(url, import.meta.url).href} alt={result.title}>
+    {#if !result}
+    {:else if Object.hasOwn(result, 'content')}
+      <img src={new URL(`/src/lib/assets/events/${result.picture}`, import.meta.url).href} alt={result.title}>
+    {:else}
+      <img src={new URL(`/src/lib/assets/${result.category}/${result.filename}`, import.meta.url).href} alt={result.title}>
+    {/if}
     <h3>{result.title}</h3>
   </button>
   {#if selected}

@@ -3,7 +3,6 @@ import type { Painting } from '$mytypes/Painting';
 import { error } from '@sveltejs/kit';
 import allPaintings from '$assets/paintings.json';
 
-export const prerender = true;
 export const ssr = false;
 export const csr = true;
 

@@ -5,8 +5,8 @@ import { error } from '@sveltejs/kit'
 import paintings from '$assets/paintings.json';
 import events from '$assets/events.json';
 
-export const ssr = false;
 export const csr = true;
+export const ssr = false;
 
 export const load: PageLoad = async() => {
     if (!paintings) throw error(404, 'We could not find any painting.');

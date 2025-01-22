@@ -12,12 +12,16 @@
   } = $props();
   let searchQuery: string = $state('');
   let results: Painting[] | Event[] = $derived(
-    fuzzysort.go(searchQuery, items, {
-      keys: Object.hasOwn(items[0], 'content')
-        ? ['title', 'description']
-        : ['title', 'description', 'date', 'content'],
-    }).map(r => r.obj)
+    items[0]
+      ? fuzzysort.go(searchQuery, items, {
+        keys: Object.hasOwn(items[0], 'content')
+          ? ['title', 'description']
+          : ['title', 'description', 'date', 'content'],
+      }).map(r => r.obj)
+    : []
   );
+  console.log(items);
+  $inspect(results);
 </script>
 
 <label>
