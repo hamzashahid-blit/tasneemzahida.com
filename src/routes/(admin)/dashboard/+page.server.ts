@@ -29,7 +29,6 @@ export const actions: Actions = {
         const description: string = data.has('description') ? String(data.get('description')) : '';
         const content: string     = data.has('content')     ? String(data.get('content'))     : '';
 
-        console.log(data);
         const errors: Record<string, string> = {};
         if (!title       || typeof title !== 'string') errors.title = 'Title is required.';
         if (!date        || typeof date !== 'string') errors.date = 'Date is required.';
@@ -87,9 +86,10 @@ export const actions: Actions = {
             ? newId + path.extname(file.name)
             : (event?.picture ?? null);
 
+        if (!title       || typeof title !== 'string') errors.title = 'Title cannot be empty.';
+        if (!date        || typeof date !== 'string') errors.date = 'Date is required.';
         if (!description || typeof description !== 'string') errors.description = 'Description cannot be empty.';
-        if (!title || typeof title !== 'string') errors.title = 'Title cannot be empty.';
-        if (!content || typeof content !== 'string') errors.content = 'Content cannot be empty.';
+        if (!content     || typeof content !== 'string') errors.content = 'Content cannot be empty.';
         
         if (!file || !(file instanceof File) || file.size === 0) {
             if (title === event?.title

@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
 import type { Painting } from '$mytypes/Painting';
-import { error, json } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 import allPaintings from '$assets/paintings.json';
 
 export const prerender = true;

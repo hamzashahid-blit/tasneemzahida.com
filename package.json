@@ -15,6 +15,7 @@
 		"@sveltejs/adapter-auto": "^3.3.1",
 		"@sveltejs/kit": "^2.15.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
+		"@types/bcrypt": "^5.0.2",
 		"autoprefixer": "^10.4.20",
 		"postcss": "^8.4.49",
 		"prettier": "^3.4.2",
@@ -30,7 +31,9 @@
 	"type": "module",
 	"dependencies": {
 		"@picocss/pico": "^2.0.6",
+		"bcrypt": "^5.1.1",
 		"browserify-fs": "^1.0.0",
+		"carta-md": "^4.6.7",
 		"dompurify": "^3.2.3",
 		"fuzzysort": "^3.1.0",
 		"marked": "^15.0.4",
