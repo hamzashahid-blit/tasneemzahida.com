@@ -13,6 +13,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.3.1",
+		"@sveltejs/adapter-node": "^5.2.12",
 		"@sveltejs/adapter-vercel": "^5.5.3",
 		"@sveltejs/kit": "^2.16.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
@@ -37,6 +38,7 @@
 		"browserify-fs": "^1.0.0",
 		"carta-md": "^4.6.7",
 		"dompurify": "^3.2.3",
+		"dotenv": "^16.4.7",
 		"fuzzysort": "^3.1.0",
 		"marked": "^15.0.6",
 		"svelte-awesome": "^3.3.5",

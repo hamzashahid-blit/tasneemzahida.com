@@ -20,6 +20,7 @@
       <PasswordInput {form} />
       <button
         name="login"
+        aria-invalid={form ? (form?.errors?.login ? 'true' : 'false') : null}
         aria-describedby="login-helper"
         >Login</button>
       <small id="login-helper">{form?.errors?.login}</small>
