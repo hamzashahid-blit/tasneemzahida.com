@@ -1,0 +1,1 @@
+import{H as r}from"./CYgJF_JY.js";function a(t,e){throw new r(t,e)}function h(t,e){const o=JSON.stringify(t),n=new Headers(e==null?void 0:e.headers);return n.has("content-length")||n.set("content-length",s.encode(o).byteLength.toString()),n.has("content-type")||n.set("content-type","application/json"),new Response(o,{...e,headers:n})}const s=new TextEncoder;export{a as e,h as j};
